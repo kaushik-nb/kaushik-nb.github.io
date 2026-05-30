@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!--
+  ╔══════════════════════════════════════════════════════════════════╗
+  ║           KAUSHIK NATH BHAUMIK — ABOUT PAGE                      ║
+  ║                                                                  ║
+  ║  HOW TO USE THIS FILE                                            ║
+  ║  ─────────────────────────────────────────────────────────────   ║
+  ║  This file lives inside a folder called "docs/".                 ║
+  ║  The folder structure on computer should look like this:         ║
+  ║                                                                  ║
+  ║    your-website/                                                 ║
+  ║    ├── images/                                                   ║
+  ║    │   └── 01_profile.jpg    ← profile photo                     ║
+  ║        └── any_other_photos.jpg                                  ║
+  ║    ├── docs/                                                     ║
+  ║    │   ├── index.html        ← this file                         ║
+  ║    │   ├── research.html                                         ║
+  ║    │   ├── publications.html                                     ║
+  ║    │   └── contact.html                                          ║
+  ║    └── files/                                                    ║
+  ║       └── Kaushik_Nath_Bhaumik_Resume_20260505.pdf    ← CV       ║
+  ║                                                                  ║
+  ║                                                                  ║
+  ║  ─────────────────────────────────────────────────────────────   ║
+  ╚══════════════════════════════════════════════════════════════════╝
+-->
+
+<!-- PAGE TITLE — shown in the browser tab -->
+<title>About — Kaushik Nath Bhaumik, Ph.D.</title>
+
+<!-- PAGE DESCRIPTION  -->
+<meta name="description" content="Pharmaceutical and analytical scientist with expertise in Peptide Chemistry, Drug Delivery LC–MS/MS workflows, peptide-level analytics and complex-sample data analysis." />
+
+<!-- ───────────────────────────────────────────────────────────────
+     EXTERNAL RESOURCES — do not edit these lines
+     They load icons (Font Awesome) and fonts (Google Fonts)
+     ─────────────────────────────────────────────────────────────── -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<!-- ───────────────────────────────────────────────────────────────
+     STYLES — this block controls all colours, fonts and spacing.
+     You don't need to touch this unless you want to change colours.
+
+     COLOUR GUIDE (change the hex values to change the colour):
+       --primary   #0F4C5C  →  the deep teal used for headings/buttons
+       --secondary #C18C2C  →  the amber/gold used for accents
+       --accent    #B33A3A  →  the brick red (used sparingly)
+       --bg        #FBF8F1  →  the cream page background
+       --ink       #1A2330  →  the main text colour (near-black)
+     ─────────────────────────────────────────────────────────────── -->
+<style>
+:root {
+  --primary:       #0F4C5C;
+  --primary-700:   #0A3845;
+  --primary-300:   #6FA5B3;
+  --secondary:     #C18C2C;
+  --secondary-300: #E2B66A;
+  --accent:        #B33A3A;
+  --ink:           #1A2330;
+  --ink-2:         #475467;
+  --ink-3:         #8A94A6;
+  --line:          #E4E1D8;
+  --line-2:        #D9D3C2;
+  --bg:            #FBF8F1;
+  --bg-alt:        #F3EEDF;
+  --bg-card:       #FFFFFF;
+  --bg-dark:       #0F4C5C;
+  --success:       #2F7D6B;
+  --font-display:  'Fraunces', Georgia, serif;
+  --font-body:     'IBM Plex Sans', system-ui, sans-serif;
+  --font-mono:     'JetBrains Mono', ui-monospace, monospace;
+  --shadow-sm: 0 1px 2px rgba(15,76,92,0.08);
+  --shadow-md: 0 6px 18px rgba(15,76,92,0.10);
+  --radius-sm: 4px; --radius: 8px; --radius-lg: 14px;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: var(--font-body); color: var(--ink); background: var(--bg);
+  line-height: 1.6; -webkit-font-smoothing: antialiased;
+  background-image: radial-gradient(rgba(15,76,92,0.06) 1px, transparent 1px);
+  background-size: 22px 22px; background-attachment: fixed;
+}
+h1,h2,h3,h4 { font-family: var(--font-display); font-weight: 600; color: var(--ink); letter-spacing: -0.01em; line-height: 1.18; margin: 0 0 0.4em; }
+h1 { font-size: clamp(2.2rem, 4vw, 3.2rem); font-weight: 700; }
+h2 { font-size: clamp(1.5rem, 2.4vw, 2rem); }
+h3 { font-size: 1.18rem; }
+p  { margin: 0 0 1rem; color: var(--ink-2); }
+a  { color: var(--primary); text-decoration: none; transition: color .2s; }
+a:hover { color: var(--secondary); }
+small { color: var(--ink-3); }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 28px; }
+.mono { font-family: var(--font-mono); }
+.topbar { position: sticky; top: 0; z-index: 50; background: rgba(251,248,241,0.93); backdrop-filter: saturate(140%) blur(8px); border-bottom: 1px solid var(--line); }
+.topbar-inner { display: flex; align-items: center; justify-content: space-between; padding: 14px 28px; max-width: 1200px; margin: 0 auto; }
+.brand { display: flex; align-items: center; gap: 12px; font-family: var(--font-display); font-weight: 700; font-size: 1.05rem; color: var(--primary); text-decoration: none; }
+.brand-mark { width: 34px; height: 34px; display: grid; place-items: center; background: var(--primary); color: #fff; border-radius: 6px; font-family: var(--font-mono); font-size: 0.85rem; font-weight: 600; letter-spacing: -0.02em; }
+.brand small { display: block; color: var(--ink-3); font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; }
+.nav { display: flex; gap: 4px; align-items: center; }
+.nav a { position: relative; padding: 8px 12px; border-radius: 6px; color: var(--ink-2); font-size: 0.93rem; font-weight: 500; }
+.nav a:hover { background: var(--bg-alt); color: var(--ink); }
+.nav a.active { color: var(--primary); background: rgba(15,76,92,0.08); }
+.nav a.active::after { content: ''; position: absolute; left: 12px; right: 12px; bottom: 4px; height: 2px; background: var(--secondary); }
+.menu-btn { display: none; background: none; border: 1px solid var(--line); border-radius: 6px; padding: 8px 10px; cursor: pointer; }
+@media (max-width: 820px) {
+  .nav { display: none; }
+  .nav.open { display: flex; flex-direction: column; align-items: stretch; position: absolute; top: 64px; left: 16px; right: 16px; background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 8px; gap: 2px; box-shadow: var(--shadow-md); }
+  .menu-btn { display: inline-flex; }
+}
+.page-hero { padding: 56px 0 40px; border-bottom: 1px solid var(--line); }
+.eyebrow { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--secondary); }
+.eyebrow::before { content: ''; width: 24px; height: 1px; background: var(--secondary); }
+.btn { display: inline-flex; align-items: center; gap: 8px; padding: 11px 18px; border-radius: var(--radius); font-weight: 600; font-size: 0.94rem; border: 1px solid transparent; cursor: pointer; transition: transform .2s, background .2s, border-color .2s, color .2s; text-decoration: none; }
+.btn-outline { background: transparent; color: var(--primary); border-color: var(--primary); }
+.btn-outline:hover { background: var(--primary); color: #fff; transform: translateY(-2px); }
+.section { padding: 72px 0; }
+.section.alt { background: var(--bg-alt); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.section-head { display: flex; align-items: end; justify-content: space-between; flex-wrap: wrap; gap: 16px; margin-bottom: 36px; }
+.section-head h2 { margin: 6px 0 0; }
+.card { background: var(--bg-card); border: 1px solid var(--line); border-radius: var(--radius-lg); padding: 24px; box-shadow: var(--shadow-sm); transition: transform .25s, box-shadow .25s; }
+.card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+.profile-photo-wrap { width: 100%; aspect-ratio: 1/1; overflow: hidden; border-bottom: 1px solid var(--line); }
+.profile-photo-wrap img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
+.profile-photo-wrap .photo-fallback { width: 100%; height: 100%; background: linear-gradient(135deg, var(--primary), var(--primary-700)); display: none; place-items: center; color: #fff; font-family: var(--font-display); font-size: 5rem; font-weight: 700; aspect-ratio: 1/1; }
+.id-rows { font-family: var(--font-mono); font-size: 12px; }
+.id-rows .row { display: grid; grid-template-columns: 72px 1fr; padding: 8px 0; border-bottom: 1px dashed var(--line); }
+.id-rows .row:last-child { border-bottom: 0; }
+.id-rows .k { color: var(--ink-3); letter-spacing: 0.08em; text-transform: uppercase; }
+.id-rows .v { color: var(--ink); font-family: var(--font-body); font-weight: 500; font-size: 13px; }
+.timeline { display: flex; flex-direction: column; }
+.tl-item { display: grid; grid-template-columns: 200px 1fr; gap: 24px; padding: 24px 0; border-bottom: 1px solid var(--line); }
+.tl-item:last-child { border-bottom: none; }
+.tl-item.primary .tl-title::before { background: var(--primary); }
+.tl-item .tl-title::before { content: ''; display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--secondary); margin-right: 8px; vertical-align: middle; flex-shrink: 0; }
+.tl-time  { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.10em; text-transform: uppercase; color: var(--ink-3); padding-top: 3px; }
+.tl-title { font-weight: 700; font-size: 1.02rem; color: var(--ink); margin-bottom: 2px; display: flex; align-items: center; }
+.tl-org   { font-size: 0.9rem; color: var(--secondary); font-weight: 600; margin-bottom: 8px; }
+.tl-body  { font-size: 0.93rem; color: var(--ink-2); line-height: 1.65; }
+@media (max-width: 680px) { .tl-item { grid-template-columns: 1fr; gap: 4px; } }
+.edu-timeline { list-style: none; margin: 0; padding: 0; }
+.edu-item { display: grid; grid-template-columns: 200px 1fr; gap: 24px; padding: 24px 0; border-bottom: 1px solid var(--line); }
+.edu-item:last-child { border-bottom: none; }
+.edu-year { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.10em; text-transform: uppercase; color: var(--ink-3); padding-top: 3px; }
+.edu-degree { font-weight: 700; font-size: 1.02rem; color: var(--ink); margin-bottom: 2px; }
+.edu-uni  { font-size: 0.9rem; color: var(--secondary); font-weight: 600; margin-bottom: 8px; }
+.edu-detail { font-size: 0.93rem; color: var(--ink-2); line-height: 1.65; }
+@media (max-width: 680px) { .edu-item { grid-template-columns: 1fr; gap: 4px; } }
+.sk-techniques { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.sk-tag { display: inline-block; padding: 4px 12px; background: var(--bg-alt); border: 1px solid var(--line-2); border-radius: 999px; font-size: 0.82rem; color: var(--ink-2); font-weight: 500; }
+.grid { display: grid; gap: 24px; }
+.grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (max-width: 700px) { .grid-2 { grid-template-columns: 1fr; } }
+.tag-list { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border-radius: 999px; background: var(--bg-alt); border: 1px solid var(--line-2); color: var(--ink-2); font-size: 0.78rem; font-weight: 500; }
+/* Social icons — dark defaults are for the footer; the profile card overrides
+   each one with inline style= to make them appear on the cream background */
+.social-row { display: flex; gap: 10px; flex-wrap: wrap; }
+.social-row a { width: 38px; height: 38px; border-radius: 8px; display: grid; place-items: center; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); color: #DCEAEC; transition: background .2s, color .2s, border-color .2s; }
+.social-row a:hover { background: var(--secondary); color: #fff; border-color: var(--secondary); }
+.footer { background: var(--bg-dark); color: #DCEAEC; padding: 48px 0 28px; }
+.footer h4 { color: #fff; font-family: var(--font-display); margin-bottom: 12px; }
+.footer a { color: #DCEAEC; }
+.footer a:hover { color: var(--secondary-300); }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; }
+.footer-bottom { margin-top: 36px; padding-top: 18px; border-top: 1px solid rgba(255,255,255,0.12); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-family: var(--font-mono); font-size: 12px; color: #9DB6BB; }
+@media (max-width: 720px) { .footer-grid { grid-template-columns: 1fr; } }
+@media (max-width: 900px) { .two-col { grid-template-columns: 1fr !important; } }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     NAVIGATION BAR
+     ═══════════════════════════════════════════════════════════════
+     The bar at the very top of every page.
+
+     TO CHANGE NAME in the top-left:
+       Find "Kaushik Nath Bhaumik" below and edit it.
+
+     TO CHANGE THE SUBTITLE (the small text under name):
+       Find "Ph.D. · Pharmaceutical Sciences" and edit it.
+     ─────────────────────────────────────────────────────────────── -->
+<header class="topbar">
+  <div class="topbar-inner">
+
+    <!-- Logo / name in top-left corner -->
+    <a href="index.html" class="brand">
+      <span class="brand-mark">KB</span>  <!-- ← change "KB" to initials if desired -->
+      <span>
+        Kaushik Nath Bhaumik  <!-- ← FULL NAME here -->
+        <small>Ph.D. · Pharmaceutical Sciences</small>  <!-- ← TITLE / FIELD here -->
+      </span>
+    </a>
+
+    <!-- Hamburger button — only appears on small screens (mobile) -->
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Navigation links — edit the text between > and </a> to rename a page -->
+    <nav class="nav" id="nav">
+      <a href="index.html" class="active">About</a>  <!-- class="active" = currently open page -->
+      <a href="research.html">Research</a>
+      <a href="outreach.html">Outreach</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+  </div>
+</header>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     PAGE HERO  (the large introductory banner at the top)
+     ═══════════════════════════════════════════════════════════════
+     This is the first thing visitors see when they open this page.
+     It shows a small label, a big heading, and one short sentence.
+
+     TO EDIT:
+       • The small label  →  find "Profile" and change it
+       • The big heading  →  find "About me." and change it
+       • The sentence     →  find the <p> paragraph and edit it
+     ─────────────────────────────────────────────────────────────── -->
+<section class="page-hero">
+  <div class="container">
+
+    <!-- Small amber label above the heading -->
+    <div class="eyebrow">Profile</div>  <!-- ← change the label word here -->
+
+    <!-- Big page heading -->
+    <h1>About me.</h1>  <!-- ← change heading here -->
+
+    <!-- One-line description shown under the heading -->
+    <p style="max-width:72ch; font-size:1.05rem; margin-top:10px;">
+      Pharmaceutical and analytical scientist with expertise in Peptide Chemistry,
+      Drug Delivery LC-MS/MS workflows, peptide-level analytics and
+      complex-sample data analysis.
+      <!-- ↑ Edit this sentence. - is just a dash (–). Do not remove it. -->
+    </p>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     PROFILE CARD  +  BIO TEXT  (side-by-side, two columns)
+     ═══════════════════════════════════════════════════════════════
+     Left column  →  photo card with contact details & icons
+     Right column →  the "Background" paragraph text
+     ─────────────────────────────────────────────────────────────── -->
+<section class="section">
+  <div class="container">
+    <div class="grid two-col" style="grid-template-columns: 300px 1fr; gap: 52px; align-items: start;">
+
+
+      <!-- ─────────────────────────────────────────────────────────
+           LEFT COLUMN: PROFILE CARD
+           ─────────────────────────────────────────────────────────
+           This card sticks to the top of the screen as you scroll.
+           It contains photo, name, a few key facts, a CV
+           button, and social media icons.
+           ───────────────────────────────────────────────────────── -->
+      <aside>
+        <div class="card" style="padding:0; overflow:hidden; position:sticky; top:80px;">
+
+          <!-- ···················································
+               PROFILE PHOTO
+               ···················································
+               The image file must be at:
+                 your-webdocs/images/01_profile.jpg
+               (one folder UP from docs/, then into images/)
+
+               The path "../images/01_profile.jpg" means:
+                 go up one folder (..) → then into images/ → then the file.
+
+               TO CHANGE THE PHOTO:
+                 Replace "01_profile.jpg" with new filename.
+                 Make sure the file is in the images/ folder.
+
+               If the photo cannot be found, the page will
+               automatically show the "KB" initials block instead.
+               ··················································· -->
+          <div class="profile-photo-wrap">
+            <img
+              src="../images/01_profile.jpg"
+              alt="Kaushik Nath Bhaumik — profile photo"
+              style="transform: scale(1.50); transform-origin: center bottom;"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';"
+            />
+            <!-- Fallback shown only if the photo file is missing -->
+            <div class="photo-fallback">KB</div>  <!-- ← change "KB" to initials -->
+          </div>
+
+
+          <!-- ···················································
+               NAME + TITLE (inside the card, below the photo)
+               ··················································· -->
+          <div style="padding:22px;">
+            <h3 style="margin-bottom:4px;">
+              Kaushik Nath Bhaumik, Ph.D.  <!-- ← FULL NAME here -->
+            </h3>
+            <div class="mono" style="font-size:11px; color:var(--secondary); letter-spacing:.12em; text-transform:uppercase; margin-bottom:16px;">
+              Pharmaceutical Scientist  <!-- ← JOB TITLE / ONE-LINE DESCRIPTION here -->
+            </div>
+
+
+            <!-- ···················································
+                 KEY INFO ROWS  (Email / Based / Status)
+                 ···················································
+                 Each row has two cells: a label (k) and a value (v).
+                 TO EDIT: change only the text in the <div class="v"> cell.
+                 To add a new row, copy one <div class="row">...</div>
+                 block and paste it, then edit the label and value.
+                 ··················································· -->
+            <div class="id-rows">
+
+              <!-- Row 1: Email address -->
+              <div class="row">
+                <div class="k">Email</div>
+                <div class="v">
+                  <!-- The href="mailto:..." opens the email app when clicked -->
+                  <a href="mailto:kaushiknb9@gmail.com">kaushiknb9@gmail.com</a>
+                  <!-- ↑ Change email address in BOTH places above -->
+                </div>
+              </div>
+
+              <!-- Row 2: Current city / country -->
+              <div class="row">
+                <div class="k">Based</div>
+                <div class="v">Norwich, UK</div>  <!-- ← change city here -->
+              </div>
+
+              <!-- Row 3: Availability status (green dot) -->
+              <div class="row">
+                <div class="k">Status</div>
+                <div class="v" style="color:var(--success);">
+                  <i class="fas fa-circle" style="font-size:7px;"></i>
+                  Open to opportunities  <!-- ← change status text here -->
+                </div>
+              </div>
+
+            </div>
+            <!-- end id-rows -->
+
+
+            <!-- ···················································
+                 CV BUTTON
+                 ···················································
+                 Clicking this opens the PDF in a new browser tab.
+
+                 TO CHANGE THE PDF FILE:
+                   Update the href="..." path below.
+                   The PDF should be in the root folder (one level up
+                   from docs/), so the path starts with "../".
+                 ··················································· -->
+            <div style="margin-top:18px;">
+              <a href="../files/Kaushik_Nath_Bhaumik_Resume_2026-05-05.pdf"
+                 target="_blank" rel="noopener"
+                 class="btn btn-outline"
+                 style="justify-content:center; width:100%;">
+                <i class="fas fa-file-pdf"></i> CV
+                <!-- ↑ Change "CV" to "Download CV" or any label you like -->
+              </a>
+            </div>
+
+
+            <!-- ···················································
+                 SOCIAL MEDIA ICONS
+                 ···················································
+                 Six icon buttons. Each one has:
+                   href="..."       → the URL it links to
+                   aria-label="..."  → description for screen readers
+
+                 TO EDIT A LINK: change the URL inside href="..."
+                 TO REMOVE AN ICON: delete the entire <a ...>...</a> line
+                 TO ADD AN ICON: copy a line and change the href and
+                   the icon class (e.g. fa-twitter, fa-orcid, etc.)
+
+                 IMPORTANT: keep the style="..." on each <a> tag —
+                 that is what makes the icons appear on the cream
+                 background (without it they'd be invisible).
+                 ··················································· -->
+            <div class="social-row" style="margin-top:18px; justify-content:center;">
+
+              <!-- Google Scholar -->
+              <a href="https://scholar.google.com/citations?user=DrMMYFoAAAAJ&hl=en"
+                 target="_blank" rel="noopener"
+                 aria-label="Google Scholar"
+                 style="background:var(--bg-alt); border-color:var(--line); color:var(--ink);">
+                <i class="fas fa-graduation-cap"></i>
+              </a>
+
+              <!-- ResearchGate -->
+              <a href="https://www.researchgate.net/profile/Kaushik-Nath-Bhaumik"
+                 target="_blank" rel="noopener"
+                 aria-label="ResearchGate"
+                 style="background:var(--bg-alt); border-color:var(--line); color:var(--ink);">
+                <i class="fab fa-researchgate"></i>
+              </a>
+
+              <!-- LinkedIn -->
+              <a href="https://www.linkedin.com/in/kaushik-nath-bhaumik-2a4a73bb/"
+                 target="_blank" rel="noopener"
+                 aria-label="LinkedIn"
+                 style="background:var(--bg-alt); border-color:var(--line); color:var(--ink);">
+                <i class="fab fa-linkedin"></i>
+              </a>
+
+              <!-- X / Twitter -->
+              <a href="https://x.com/kaushik_nb"
+                 target="_blank" rel="noopener"
+                 aria-label="X / Twitter"
+                 style="background:var(--bg-alt); border-color:var(--line); color:var(--ink);">
+                <i class="fab fa-x-twitter"></i>
+              </a>
+
+              <!-- GitHub -->
+              <a href="https://github.com/kaushik-nb"
+                 target="_blank" rel="noopener"
+                 aria-label="GitHub"
+                 style="background:var(--bg-alt); border-color:var(--line); color:var(--ink);">
+                <i class="fab fa-github"></i>
+              </a>
+              
+              <!-- Email icon -->
+              <a href="mailto:kaushiknb9@gmail.com"
+                 aria-label="Email"
+                 style="background:var(--bg-alt); border-color:var(--line); color:var(--ink);">
+                <i class="fas fa-envelope"></i>
+              </a>
+
+            </div>
+            <!-- end social row -->
+
+          </div><!-- end card inner padding -->
+        </div><!-- end card -->
+      </aside>
+      <!-- end left column -->
+
+
+      <!-- ─────────────────────────────────────────────────────────
+           RIGHT COLUMN: BIO TEXT
+           ─────────────────────────────────────────────────────────
+           The biographical paragraphs that appear to the right of
+           the profile card.
+
+           TO EDIT: simply change the text inside the <p> tags.
+           Each <p>...</p> is one paragraph. To add a new paragraph,
+           copy a <p>...</p> block and paste it below.
+           ───────────────────────────────────────────────────────── -->
+      <div>
+
+        <!-- Small amber label above the heading -->
+        <div class="eyebrow">Bio</div>  <!-- ← change label if desired -->
+
+        <!-- Section heading -->
+        <h2 style="margin-top:8px;">Background</h2>  <!-- ← change heading if desired -->
+
+        <!-- Paragraph 1 -->
+        <p style="margin-top:14px;">
+          I'm a pharmaceutical and bio-chemistry researcher with a multidisciplinary
+          skill set spanning peptide chemistry, analytical chemistry / LC-MS,
+          drug delivery and biological assays. My doctoral work at the University of
+          Szeged in Hungary explored how antimicrobial peptides modulate bacterial
+          electrophysiology - a sub-MIC strategy to enhance antibiotic efficacy
+          - and gave me deep hands-on experience with peptide-level mass
+          spectrometry.
+          <!-- ↑ Edit this paragraph -->
+        </p>
+
+        <!-- Paragraph 2 -->
+        <p>
+          Before the PhD, I worked in the Indian pharmaceutical industry at Sun
+          Pharmaceutical Industries Ltd., performing GMP-compliant HPLC analysis,
+          and at the Translational Health Science and Technology Institute
+          (Government of India) developing lipid nanoparticle and polymeric implant
+          drug delivery systems for tuberculosis treatment.
+        </p>
+
+        <!-- Paragraph 3 -->
+        <p>
+          More recently I held a Lecturer position at the University of East Anglia
+          on oral delivery of weight-loss peptide drugs, and a Postdoctoral
+          Fellowship at the University of Brighton on the EU Horizon-funded
+          INJECTHEAL project building LC-MS/MS workflows for
+          peptide-based injectables. I'm now actively looking for analytical /
+          proteomics roles where I can apply that LC-MS, DIA and
+          data-analysis experience at scale.
+        </p>
+
+        <!-- ···················································
+             KEYWORD CHIPS  (the small pill-shaped tags)
+             ···················································
+             TO ADD A TAG: copy one <span class="chip">...</span>
+               and paste it, then change the text inside.
+             TO REMOVE A TAG: delete the whole <span> line.
+             ··················································· -->
+        <div class="tag-list" style="margin-top:4px;">
+          <span class="chip">LC-MS/MS</span>
+          <span class="chip">DIA and DDA</span>
+          <span class="chip">Peptide Chemistry</span>
+          <span class="chip">Drug Delivery</span>
+          <span class="chip">MaxQuant · FragPipe</span>
+          <span class="chip">timsTOF / Orbitrap</span>
+          <span class="chip">GMP / cGxP</span>
+        </div>
+
+      </div>
+      <!-- end right column / bio -->
+
+    </div><!-- end two-column grid -->
+  </div><!-- end container -->
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     EXPERIENCE / CAREER TIMELINE
+     ═══════════════════════════════════════════════════════════════
+     A full-width section listing every job in reverse
+     chronological order (most recent first).
+
+     EACH JOB ENTRY looks like this:
+     ┌────────────────────────────────────────────────────────────┐
+     │ <div class="tl-item">          ← start of one job entry   │
+     │   <div class="tl-time">        ← dates on the left        │
+     │   <div>                         ← content on the right     │
+     │     <div class="tl-title">     ← job title                │
+     │     <div class="tl-org">       ← employer / institution   │
+     │     <div class="tl-body">      ← description paragraph    │
+     │ </div>                          ← end of one job entry     │
+     └────────────────────────────────────────────────────────────┘
+
+     NOTE: "primary" on the opening tag (tl-item primary) makes the
+     dot on the left appear in teal instead of amber. Use it for
+     academic/research roles; leave it off for other roles.
+
+     TO ADD A NEW JOB: copy one full <div class="tl-item">...</div>
+     block and paste it where it belongs chronologically.
+     TO REMOVE A JOB: delete the entire <div class="tl-item">...</div>
+     block for that entry.
+     ─────────────────────────────────────────────────────────────── -->
+<section class="section alt">
+  <div class="container">
+
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">Experience</div>  <!-- ← section label -->
+        <h2>Career timeline</h2>               <!-- ← section heading -->
+      </div>
+      <div class="mono" style="font-size:12px; color:var(--ink-3); letter-spacing:0.08em; text-transform:uppercase;">
+        2015 - present  <!-- ← date range shown top-right -->
+      </div>
+    </div>
+
+    <div class="timeline">
+
+
+      <!-- ── JOB 1 ─────────────────────────────────────────────── -->
+      <!-- class="tl-item primary" → teal dot (research role)       -->
+      <div class="tl-item primary">
+
+        <!-- DATES: shown on the left in small caps -->
+        <div class="tl-time">Nov 2025 – Apr 2026</div>
+
+        <div>
+          <!-- JOB TITLE -->
+          <div class="tl-title">Postdoctoral Research Fellow</div>
+
+          <!-- EMPLOYER / INSTITUTION · Location or project name -->
+          <div class="tl-org">University of Brighton · INJECTHEAL (Horizon Europe)</div>
+
+          <!-- DESCRIPTION paragraph -->
+          <div class="tl-body">
+            Worked within the EU Horizon-funded INJECTHEAL consortium on
+            self-administered injectable formulations of biologics. Designed
+            peptide-based nanocarriers for targeted delivery of therapeutics for
+            wound healing. Developed LC-MS/MS workflows for peptide identity,
+            integrity and stability characterisation. Managed research planning,
+            timelines and deliverables; supervised students and junior researchers;
+            coordinated multidisciplinary European academic and industrial partners.
+          </div>
+        </div>
+
+      </div>
+      <!-- end job 1 -->
+
+
+      <!-- ── JOB 2 ─────────────────────────────────────────────── -->
+      <!-- No "primary" → amber dot (non-research / teaching role)  -->
+      <div class="tl-item">
+
+        <div class="tl-time">Feb – Jul 2025</div>
+
+        <div>
+          <div class="tl-title">Lecturer in Drug Delivery and Pharmaceutics (Part-time)</div>
+          <div class="tl-org">University of East Anglia · Norwich, UK</div>
+          <div class="tl-body">
+            Teaching Pharmaceutics (lectures, seminars, tutorials, lab practicals)
+            on M.Pharm. and B.Sc. Pharmacology and Drug Discovery degrees.
+            Contributed to curriculum development; supervised undergraduate project
+            students. Research focused on oral delivery strategies for biologics such
+            as peptides and proteins, specifically 3D-printed polymeric capsules for
+            weight-loss peptide drugs.
+          </div>
+        </div>
+
+      </div>
+      <!-- end job 2 -->
+
+
+      <!-- ── JOB 3 ─────────────────────────────────────────────── -->
+      <div class="tl-item">
+
+        <div class="tl-time">May 2024 – Present</div>
+
+        <div>
+          <div class="tl-title">Exam Invigilator and Administrator (variable hours)</div>
+          <div class="tl-org">City College Norwich · Norwich, UK</div>
+          <div class="tl-body">
+            Invigilated paper-based and computer-based exams; monitored students to
+            prevent misconduct. Acted as scribe and reader for students with special
+            needs. Prepared exam rooms and ensured an organised, fair and inclusive
+            process for a diverse student body.
+          </div>
+        </div>
+
+      </div>
+      <!-- end job 3 -->
+
+
+      <!-- ── JOB 4 ─────────────────────────────────────────────── -->
+      <div class="tl-item primary">
+
+        <div class="tl-time">Sep 2018 – Nov 2024</div>
+
+        <div>
+          <div class="tl-title">PhD Researcher</div>
+          <div class="tl-org">Doctoral School of Pharmaceutical Sciences, University of Szeged · Hungary</div>
+          <div class="tl-body">
+            Synthesised antimicrobial peptides and peptidomimetic foldamers using
+            manual and automated SPPS; purified by HPLC-MS, characterised by NMR,
+            CD spectroscopy and UV-Vis. Formulated lipid vesicles for biophysical
+            analysis. Developed fluorescence spectroscopy and NMR assays for
+            membrane activity; performed protein expression in <em>E. coli</em> and
+            ITC binding assays. Collaborated on in vitro/in vivo assays (MIC, FACS).
+            Data analysis and visualisation in RStudio.
+          </div>
+        </div>
+
+      </div>
+      <!-- end job 4 -->
+
+
+      <!-- ── JOB 5 ─────────────────────────────────────────────── -->
+      <div class="tl-item">
+
+        <div class="tl-time">Oct 2017 – Feb 2018</div>
+
+        <div>
+          <div class="tl-title">Senior Officer — Quality Control</div>
+          <div class="tl-org">Sun Pharmaceutical Industries Ltd. · Halol, India</div>
+          <div class="tl-body">
+            HPLC analysis of pharmaceutical samples (finished APIs, intermediates,
+            raw materials, recovered solvents, in-process material, working
+            standards) per approved specifications. Troubleshooting; instrument
+            maintenance and calibration. Ensured compliance with cGxP and applicable
+            safety standards; maintained accurate laboratory records and audit trails.
+          </div>
+        </div>
+
+      </div>
+      <!-- end job 5 -->
+
+
+      <!-- ── JOB 6 ─────────────────────────────────────────────── -->
+      <div class="tl-item primary">
+
+        <div class="tl-time">Dec 2015 – Oct 2017</div>
+
+        <div>
+          <div class="tl-title">Junior Research Fellow</div>
+          <div class="tl-org">Translational Health Science and Technology Institute (Govt. of India) · Faridabad, India</div>
+          <div class="tl-body">
+            Formulated drug delivery systems including lipid nanoparticles (SLN,
+            NLC), biodegradable polymeric and hydrogel drug implants, and lipid-drug
+            conjugates. Developed and validated HPLC methods for drug encapsulation
+            and in vitro/in vivo pharmacokinetic studies. Conducted analysis using
+            NMR, DLS, DSC-TGA, UV-Vis, TFF systems and dissolution apparatus.
+            Analysed drug content from blood/plasma and animal organs; performed
+            cytokine assays and cellular biodistribution using fluorescence and
+            confocal microscopy.
+          </div>
+        </div>
+
+      </div>
+      <!-- end job 6 -->
+
+
+    </div><!-- end timeline -->
+  </div><!-- end container -->
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     EDUCATION / ACADEMIC BACKGROUND
+     ═══════════════════════════════════════════════════════════════
+     Lists the degrees as a clean timeline — no cards, no boxes.
+
+     EACH DEGREE ENTRY looks like this:
+     ┌────────────────────────────────────────────────────────────┐
+     │ <li class="edu-item">           ← start of one degree      │
+     │   <div class="edu-year">        ← years on the left        │
+     │   <div>                          ← content on the right     │
+     │     <div class="edu-degree">    ← degree title             │
+     │     <div class="edu-uni">       ← university / institution │
+     │     <div class="edu-detail">    ← supervisor + thesis text │
+     │ </li>                            ← end of one degree        │
+     └────────────────────────────────────────────────────────────┘
+
+     TO ADD A DEGREE: copy one <li class="edu-item">...</li> block
+     and paste it, then fill in the details.
+     ─────────────────────────────────────────────────────────────── -->
+<section class="section">
+  <div class="container">
+
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">Education</div>       <!-- ← section label -->
+        <h2>Academic background</h2>               <!-- ← section heading -->
+      </div>
+    </div>
+
+    <ul class="edu-timeline">
+
+
+      <!-- ── DEGREE 1 ──────────────────────────────────────────── -->
+      <li class="edu-item">
+
+        <!-- Year range shown on the left -->
+        <div class="edu-year">2018 – 2024</div>
+
+        <div>
+          <!-- Degree title -->
+          <div class="edu-degree">Ph.D. in Pharmaceutical Chemistry</div>
+
+          <!-- University and country -->
+          <div class="edu-uni">
+            Doctoral School of Pharmaceutical Sciences, University of Szeged · Hungary
+          </div>
+
+          <!-- Supervisor and thesis title.
+               <strong>...</strong> makes text bold.
+               <em>...</em> makes text italic. -->
+          <div class="edu-detail">
+            <strong>Supervisor:</strong> Prof. Tamás A. Martinek<br>
+            <strong>Thesis:</strong>
+            <em>
+              Enhancing antibiotic efficacy through antimicrobial peptide-mediated
+              modulation of bacterial electrophysiology — the sub-MIC approach.
+            </em>
+          </div>
+        </div>
+
+      </li>
+      <!-- end degree 1 -->
+
+
+      <!-- ── DEGREE 2 ──────────────────────────────────────────── -->
+      <li class="edu-item">
+
+        <div class="edu-year">2013 – 2015</div>
+
+        <div>
+          <div class="edu-degree">Master of Pharmacy — Pharmaceutical Chemistry</div>
+          <div class="edu-uni">
+            Department of Pharmaceutical Chemistry, Tripura University · India
+          </div>
+          <div class="edu-detail">
+            <strong>Supervisor:</strong> Dr. Rajat Ghosh<br>
+            <strong>Dissertation:</strong>
+            Synthesis, characterization and biological evaluation of thiazine
+            ring-based newly synthesised heterocyclic compounds.
+          </div>
+        </div>
+
+      </li>
+      <!-- end degree 2 -->
+
+
+      <!-- ── DEGREE 3 ──────────────────────────────────────────── -->
+      <li class="edu-item">
+
+        <div class="edu-year">2009 – 2013</div>
+
+        <div>
+          <div class="edu-degree">Bachelor of Pharmacy — Pharmaceutical Sciences</div>
+          <div class="edu-uni">
+            Regional Institute of Pharmaceutical Science and Technology,
+            Tripura University · India
+          </div>
+          <div class="edu-detail">
+            <strong>Supervisor:</strong> Dr. Tejendra Bhakta<br>
+            <strong>Dissertation:</strong>
+            Evaluation of free-radical scavenging activity of different fractioned
+            extracts of <em>Ichnocarpus frutescens</em>.
+          </div>
+        </div>
+
+      </li>
+      <!-- end degree 3 -->
+
+
+    </ul>
+  </div><!-- end container -->
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     SKILLS & INSTRUMENTATION
+     ═══════════════════════════════════════════════════════════════
+     Six skill cards arranged in a 2-column grid. Each card has:
+       • a coloured icon
+       • a heading
+       • a row of pill-shaped keyword tags
+
+     EACH SKILL CARD looks like this:
+     ┌────────────────────────────────────────────────────────────┐
+     │ <div class="card">                ← the card box           │
+     │   <div style="...">               ← icon + heading row     │
+     │     <div style="...">             ← coloured icon circle   │
+     │     <h3>Skill name</h3>           ← card heading           │
+     │   </div>                                                   │
+     │   <div class="sk-techniques">    ← pill tags container     │
+     │     <span class="sk-tag">Tag</span>  ← one pill tag        │
+     │   </div>                                                   │
+     │ </div>                            ← end card               │
+     └────────────────────────────────────────────────────────────┘
+
+     TO CHANGE A TAG: edit the text between <span class="sk-tag">
+       and </span>.
+     TO ADD A TAG: copy a <span class="sk-tag">...</span> line
+       and paste it inside the same sk-techniques div.
+     TO REMOVE A TAG: delete the whole <span class="sk-tag">...</span> line.
+     TO CHANGE THE ICON COLOUR: find background:var(--primary) etc.
+       and swap to any colour variable: --primary, --secondary,
+       --accent, --success, --primary-700.
+     ─────────────────────────────────────────────────────────────── -->
+<section class="section alt">
+  <div class="container">
+
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">Capabilities</div>          <!-- ← section label -->
+        <h2>Skills and instrumentation</h2>            <!-- ← section heading -->
+      </div>
+      <div class="mono" style="font-size:12px; color:var(--ink-3); letter-spacing:0.08em; text-transform:uppercase;">
+        expertise and techniques  <!-- ← small text top-right; edit based on current info -->
+      </div>
+    </div>
+
+    <div class="grid grid-2">
+
+
+      <!-- ── SKILL CARD 1: Peptide Synthesis ───────────────────── -->
+      <div class="card">
+        <div style="display:flex; align-items:center; gap:10px;">
+          <!-- Icon circle — change background colour to change the dot colour -->
+          <div style="width:36px;height:36px;border-radius:8px;background:var(--primary);color:#fff;display:grid;place-items:center;flex-shrink:0;">
+            <i class="fas fa-link"></i>  <!-- ← change icon class to change the icon -->
+          </div>
+          <h3 style="margin:0;">Peptide Synthesis</h3>  <!-- ← card heading -->
+        </div>
+        <!-- Pill tags — edit, add or remove <span> lines  -->
+        <div class="sk-techniques">
+          <span class="sk-tag">Manual SPPS</span>
+          <span class="sk-tag">Automated SPPS</span>
+          <span class="sk-tag">Foldamer design</span>
+          <span class="sk-tag">Peptidomimetics</span>
+          <span class="sk-tag">HPLC-MS purification</span>
+        </div>
+      </div>
+      <!-- end skill card 1 -->
+
+
+      <!-- ── SKILL CARD 2: Drug Delivery ───────────────────────── -->
+      <div class="card">
+        <div style="display:flex; align-items:center; gap:10px;">
+          <div style="width:36px;height:36px;border-radius:8px;background:var(--secondary);color:#fff;display:grid;place-items:center;flex-shrink:0;">
+            <i class="fas fa-vial-virus"></i>
+          </div>
+          <h3 style="margin:0;">Drug Delivery and Formulation</h3>
+        </div>
+        <div class="sk-techniques">
+          <span class="sk-tag">Lipid nanoparticles (SLN, NLC)</span>
+          <span class="sk-tag">Polymeric implants and microparticles</span>
+          <span class="sk-tag">Hydrogel implants and liposomes</span>
+          <span class="sk-tag">3D-printed polymeric capsules</span>
+          <span class="sk-tag">Encapsulation and PK studies</span>
+        </div>
+      </div>
+      <!-- end skill card 2 -->
+
+
+      <!-- ── SKILL CARD 3: LC-MS & Analytical Instruments ─────── -->
+      <div class="card">
+        <div style="display:flex; align-items:center; gap:10px;">
+          <div style="width:36px;height:36px;border-radius:8px;background:var(--accent);color:#fff;display:grid;place-items:center;flex-shrink:0;">
+            <i class="fas fa-microscope"></i>
+          </div>
+          <h3 style="margin:0;">LC-MS and Analytical Instrumentation</h3>
+        </div>
+        <div class="sk-techniques">
+          <span class="sk-tag">HPLC-MS / LC-MS/MS</span>
+          <span class="sk-tag">DDA and DIA acquisition</span>
+          <span class="sk-tag">Orbitrap (Exploris, Astral)</span>
+          <span class="sk-tag">timsTOF · PASEF · diaPASEF</span>
+          <span class="sk-tag">NMR · CD · ITC</span>
+          <span class="sk-tag">DLS · FTIR · DSC-TGA</span>
+          <span class="sk-tag">UV-Vis · Fluorescence spectroscopy</span>
+        </div>
+      </div>
+      <!-- end skill card 3 -->
+
+
+      <!-- ── SKILL CARD 4: Proteomics Data Analysis ────────────── -->
+      <div class="card">
+        <div style="display:flex; align-items:center; gap:10px;">
+          <div style="width:36px;height:36px;border-radius:8px;background:var(--primary-700);color:#fff;display:grid;place-items:center;flex-shrink:0;">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <h3 style="margin:0;">Proteomics Data Analysis</h3>
+        </div>
+        <div class="sk-techniques">
+          <span class="sk-tag">MaxQuant</span>
+          <span class="sk-tag">FragPipe (MSFragger)</span>
+          <span class="sk-tag">DIA-NN</span>
+          <span class="sk-tag">Spectronaut</span>
+          <span class="sk-tag">Perseus</span>
+          <span class="sk-tag">R / RStudio</span>
+          <span class="sk-tag">Skyline</span>
+          <span class="sk-tag">Prism</span>
+        </div>
+      </div>
+      <!-- end skill card 4 -->
+
+
+      <!-- ── SKILL CARD 5: Biology & Biochemical Assays ────────── -->
+      <div class="card">
+        <div style="display:flex; align-items:center; gap:10px;">
+          <div style="width:36px;height:36px;border-radius:8px;background:var(--success);color:#fff;display:grid;place-items:center;flex-shrink:0;">
+            <i class="fas fa-bacteria"></i>
+          </div>
+          <h3 style="margin:0;">Biology and Biochemical Assays</h3>
+        </div>
+        <div class="sk-techniques">
+          <span class="sk-tag">Antibacterial assays (MIC)</span>
+          <span class="sk-tag">FACS / Flow cytometry</span>
+          <span class="sk-tag">Cell culture</span>
+          <span class="sk-tag">Protein expression (E. coli)</span>
+          <span class="sk-tag">Confocal microscopy</span>
+          <span class="sk-tag">ITC binding</span>
+          <span class="sk-tag">Cytokine assays</span>
+        </div>
+      </div>
+      <!-- end skill card 5 -->
+
+
+      <!-- ── SKILL CARD 6: Regulatory & Quality ────────────────── -->
+      <div class="card">
+        <div style="display:flex; align-items:center; gap:10px;">
+          <div style="width:36px;height:36px;border-radius:8px;background:var(--secondary);color:#fff;display:grid;place-items:center;flex-shrink:0;">
+            <i class="fas fa-clipboard-check"></i>
+          </div>
+          <h3 style="margin:0;">Regulatory and Quality</h3>
+        </div>
+        <div class="sk-techniques">
+          <span class="sk-tag">GMP / cGxP compliance</span>
+          <span class="sk-tag">HPLC method development and validation</span>
+          <span class="sk-tag">Audit-ready documentation</span>
+          <span class="sk-tag">Instrument calibration and maintenance</span>
+          <span class="sk-tag">Horizon Europe reporting</span>
+        </div>
+      </div>
+      <!-- end skill card 6 -->
+
+
+    </div><!-- end skills grid -->
+  </div><!-- end container -->
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     FOOTER  (dark teal bar at the very bottom of every page)
+     ═══════════════════════════════════════════════════════════════
+     Contains name + tagline, a site navigation list,
+     and contact details (no phone number).
+
+     TO EDIT: find the text you want and change it directly.
+     The social icons in the footer use the same URLs as the
+     profile card above — if you change a URL above, change it
+     here too (or search the file with Ctrl+F for the old URL).
+     ─────────────────────────────────────────────────────────────── -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+
+      <!-- Column 1: name + tagline + social icons -->
+      <div>
+        <h4>Kaushik Nath Bhaumik, Ph.D.</h4>  <!-- ← NAME -->
+        <p style="color:#9DB6BB; max-width:46ch;">
+          Pharmaceutical scientist working on peptide chemistry, drug delivery
+          and analytical methods. Based in Norwich, United Kingdom.
+          <!-- ↑ Short tagline — edit based on current info -->
+        </p>
+        <!-- Footer social icons — same URLs as the profile card above -->
+        <div class="social-row" style="margin-top:14px;">
+          <a href="https://scholar.google.com/citations?user=DrMMYFoAAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+          <a href="https://www.researchgate.net/profile/Kaushik-Nath-Bhaumik" target="_blank" rel="noopener" aria-label="ResearchGate"><i class="fab fa-researchgate"></i></a>
+          <a href="https://www.linkedin.com/in/kaushik-nath-bhaumik-2a4a73bb/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="https://x.com/kaushik_nb" target="_blank" rel="noopener" aria-label="X / Twitter"><i class="fab fa-x-twitter"></i></a>
+          <a href="https://github.com/kaushik-nb" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="mailto:kaushiknb9@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+
+      <!-- Column 2: page links -->
+      <div>
+        <h4>Site</h4>
+        <ul style="list-style:none; padding:0; margin:0; display:grid; gap:6px;">
+          <li><a href="index.html">About</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="outreach.html">Outreach</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: contact details (no phone) -->
+      <div>
+        <h4>Contact</h4>
+        <ul style="list-style:none; padding:0; margin:0; display:grid; gap:6px;">
+          <li>
+            <i class="fas fa-envelope" style="margin-right:8px; color:var(--secondary-300);"></i>
+            kaushiknb9@gmail.com  <!-- ← EMAIL -->
+          </li>
+          <li>
+            <i class="fas fa-location-dot" style="margin-right:8px; color:var(--secondary-300);"></i>
+            Norwich, UK  <!-- ← CITY / COUNTRY -->
+          </li>
+        </ul>
+      </div>
+
+    </div><!-- end footer-grid -->
+
+    <!-- Bottom bar: copyright line -->
+    <div class="footer-bottom">
+      <div>&copy; 2026 Kaushik Nath Bhaumik . All rights reserved</div>
+      <!-- ↑ Change the year if needed -->
+      <div>Built with HTML and CSS . Hosted on GitHub Pages</div>
+    </div>
+
+  </div><!-- end container -->
+</footer>
+
+
+<!-- ───────────────────────────────────────────────────────────────
+     JAVASCRIPT — do not edit this block.
+     It makes the mobile hamburger menu open and close.
+     ─────────────────────────────────────────────────────────────── -->
+<script>
+  document.getElementById('menuBtn').addEventListener('click', () => {
+    document.getElementById('nav').classList.toggle('open');
+  });
+</script>
+
+</body>
+</html>
