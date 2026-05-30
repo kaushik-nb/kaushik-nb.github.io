@@ -3,14 +3,50 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Outreach &amp; Teaching — Kaushik Nath Bhaumik, Ph.D.</title>
+
+<!--
+  ╔══════════════════════════════════════════════════════════════════╗
+  ║         KAUSHIK NATH BHAUMIK — OUTREACH                          ║
+  ║                                                                  ║
+  ║  This file lives in docs/ alongside index.html, research.html    ║
+  ║  contact.html and the other pages.                               ║
+  ║                                                                  ║
+  ║  THIS PAGE CONTAINS FOUR SECTIONS:                               ║
+  ║    1. Philosophy   — a short personal statement                  ║
+  ║    2. UEA Teaching — the lecturer role at East Anglia            ║
+  ║    3. City College — the exam invigilator role                   ║
+  ║    4. CTA          — call-to-action / get in touch               ║
+  ║                                                                  ║
+  ║  HOW TO EDIT                                                     ║
+  ║  ─────────────────────────────────────────────────────────────   ║
+  ║  Change text between > and <  only.                              ║
+  ║  Do not touch anything inside < > angle brackets.                ║
+  ║  Use Ctrl+F (Cmd+F on Mac) to search for any word to find it.    ║
+  ╚══════════════════════════════════════════════════════════════════╝
+-->
+
+<!-- Browser tab title -->
+<title>Outreach and Teaching — Kaushik Nath Bhaumik, Ph.D.</title>
+
+<!-- Google search snippet (not visible on the page itself) -->
 <meta name="description" content="Teaching, education and outreach activities of Kaushik Nath Bhaumik, Ph.D. — University of East Anglia lecturer and City College Norwich exam invigilator." />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+<!-- Icons and fonts — do not edit these lines -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<!-- ───────────────────────────────────────────────────────────────
+     STYLES — controls all colours, fonts and spacing.
+     No need to edit unless changing the colour scheme.
+
+     COLOUR GUIDE:
+       --primary   #0F4C5C  →  deep teal (headings, buttons)
+       --secondary #C18C2C  →  amber/gold (accents, City College visual)
+       --bg        #FBF8F1  →  cream page background
+     ─────────────────────────────────────────────────────────────── -->
 <style>
-/* ── Variables ── */
 :root {
   --primary:       #0F4C5C;
   --primary-700:   #0A3845;
@@ -52,8 +88,6 @@ a  { color: var(--primary); text-decoration: none; transition: color .2s; }
 a:hover { color: var(--secondary); }
 .container { max-width: 1200px; margin: 0 auto; padding: 0 28px; }
 .mono { font-family: var(--font-mono); }
-
-/* ── Topbar ── */
 .topbar { position: sticky; top: 0; z-index: 50; background: rgba(251,248,241,0.93); backdrop-filter: saturate(140%) blur(8px); border-bottom: 1px solid var(--line); }
 .topbar-inner { display: flex; align-items: center; justify-content: space-between; padding: 14px 28px; max-width: 1200px; margin: 0 auto; }
 .brand { display: flex; align-items: center; gap: 12px; font-family: var(--font-display); font-weight: 700; font-size: 1.05rem; color: var(--primary); text-decoration: none; }
@@ -70,27 +104,21 @@ a:hover { color: var(--secondary); }
   .nav.open { display: flex; flex-direction: column; align-items: stretch; position: absolute; top: 64px; left: 16px; right: 16px; background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 8px; gap: 2px; box-shadow: var(--shadow-md); }
   .menu-btn { display: inline-flex; }
 }
-
-/* ── Buttons ── */
 .btn { display: inline-flex; align-items: center; gap: 8px; padding: 11px 18px; border-radius: var(--radius); font-weight: 600; font-size: 0.94rem; border: 1px solid transparent; cursor: pointer; transition: transform .2s, background .2s, color .2s; text-decoration: none; }
 .btn-primary { background: var(--primary); color: #fff; }
 .btn-primary:hover { background: var(--primary-700); color: #fff; transform: translateY(-2px); }
 .btn-ghost { background: transparent; color: var(--ink); border-color: var(--line); }
 .btn-ghost:hover { background: var(--bg-alt); }
-
-/* ── Eyebrow / chip ── */
 .eyebrow { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--secondary); }
 .eyebrow::before { content: ''; width: 24px; height: 1px; background: var(--secondary); }
 .chip { display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border-radius: 999px; background: var(--bg-alt); border: 1px solid var(--line-2); color: var(--ink-2); font-size: 0.78rem; font-weight: 500; }
 .tag-list { display: flex; flex-wrap: wrap; gap: 8px; }
-
-/* ── Section ── */
 .section { padding: 72px 0; }
 .section.alt { background: var(--bg-alt); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .section-head { display: flex; align-items: flex-end; justify-content: space-between; flex-wrap: wrap; gap: 16px; margin-bottom: 36px; }
 .section-head h2 { margin: 6px 0 0; }
 
-/* ── Page hero ── */
+/* Dark teal hero banner */
 .page-hero {
   background: var(--bg-dark);
   background-image: radial-gradient(circle at 10% 90%, rgba(193,140,44,0.18) 0, transparent 50%), radial-gradient(circle at 90% 10%, rgba(255,255,255,0.06) 0, transparent 50%), radial-gradient(rgba(255,255,255,0.04) 1px, transparent 1px);
@@ -102,58 +130,46 @@ a:hover { color: var(--secondary); }
 .page-hero h1 { color: #fff; margin-top: 10px; }
 .page-hero p { color: #B8CED2; max-width: 68ch; margin-top: 10px; font-size: 1.08rem; }
 
-/* ── Card ── */
-.card { background: var(--bg-card); border: 1px solid var(--line); border-radius: var(--radius-lg); padding: 24px; box-shadow: var(--shadow-sm); transition: transform .25s, box-shadow .25s; }
-.card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
-
-/* ── Role feature block ── */
-.role-block {
-  display: grid; grid-template-columns: 1fr 1.5fr; gap: 48px; align-items: start;
-}
+/* Role feature block: left = visual card + stats, right = text */
+.role-block { display: grid; grid-template-columns: 1fr 1.5fr; gap: 48px; align-items: start; }
 @media (max-width: 780px) { .role-block { grid-template-columns: 1fr; gap: 28px; } }
 
-.role-visual {
-  border-radius: var(--radius-lg); overflow: hidden; position: relative;
-  aspect-ratio: 4/3; display: grid; place-items: center; color: #fff;
-}
+/* Coloured illustrated panel (institution visual) */
+.role-visual { border-radius: var(--radius-lg); overflow: hidden; position: relative; aspect-ratio: 4/3; display: grid; place-items: center; color: #fff; }
 .role-visual-inner { text-align: center; position: relative; z-index: 1; }
 .role-visual-inner i { font-size: 3.8rem; opacity: .9; margin-bottom: 14px; display: block; }
 .role-visual .dot-overlay { position: absolute; inset: 0; background-image: radial-gradient(rgba(255,255,255,0.10) 1px, transparent 1px); background-size: 18px 18px; }
 
+/* Text labels inside the right column */
 .role-label { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--secondary); margin-bottom: 10px; display: block; }
-.role-title { font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; color: var(--ink); margin-bottom: 6px; line-height: 1.2; }
-.role-org { font-size: 1rem; color: var(--ink-2); font-weight: 500; margin-bottom: 18px; }
+.role-title  { font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; color: var(--ink); margin-bottom: 6px; line-height: 1.2; }
+.role-org    { font-size: 1rem; color: var(--ink-2); font-weight: 500; margin-bottom: 18px; }
 
-/* ── Responsibility list ── */
+/* Responsibility bullet list */
 .resp-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
 .resp-list li { display: flex; gap: 12px; align-items: flex-start; font-size: 0.93rem; color: var(--ink-2); line-height: 1.6; }
 .resp-list li::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--secondary); margin-top: 8px; flex-shrink: 0; }
 
-/* ── Stat strip ── */
+/* Three small stat boxes below the visual panel */
 .stat-strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 24px; }
 .stat-mini { background: var(--bg-alt); border: 1px solid var(--line); border-radius: var(--radius); padding: 16px 20px; text-align: center; }
 .stat-mini .val { font-family: var(--font-display); font-size: 1.8rem; font-weight: 700; color: var(--primary); line-height: 1; }
 .stat-mini .lbl { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-3); margin-top: 4px; }
 @media (max-width: 500px) { .stat-strip { grid-template-columns: 1fr; } }
 
-/* ── Quote block ── */
-.quote-block {
-  border-left: 4px solid var(--secondary); padding: 20px 24px;
-  background: var(--bg-alt); border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
-  margin: 28px 0;
-}
-.quote-block p { font-family: var(--font-display); font-size: 1.1rem; font-style: italic; color: var(--ink); margin: 0; line-height: 1.6; }
+/* Pull-quote block with amber left border */
+.quote-block { border-left: 4px solid var(--secondary); padding: 20px 24px; background: var(--bg-alt); border-radius: 0 var(--radius-lg) var(--radius-lg) 0; margin: 28px 0; }
+.quote-block p    { font-family: var(--font-display); font-size: 1.1rem; font-style: italic; color: var(--ink); margin: 0; line-height: 1.6; }
 .quote-block cite { display: block; margin-top: 8px; font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.10em; text-transform: uppercase; color: var(--ink-3); }
 
-/* ── Grid ── */
+/* Grid */
 .grid { display: grid; gap: 24px; }
 .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 @media (max-width: 700px) { .grid-2, .grid-3 { grid-template-columns: 1fr; } }
-
 .divider { border: none; border-top: 1px solid var(--line); margin: 56px 0; }
 
-/* ── Footer ── */
+/* Footer */
 .footer { background: var(--bg-dark); color: #DCEAEC; padding: 48px 0 28px; }
 .footer h4 { color: #fff; font-family: var(--font-display); margin-bottom: 12px; }
 .footer a { color: #DCEAEC; }
@@ -161,103 +177,259 @@ a:hover { color: var(--secondary); }
 .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; }
 .footer-bottom { margin-top: 36px; padding-top: 18px; border-top: 1px solid rgba(255,255,255,0.12); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-family: var(--font-mono); font-size: 12px; color: #9DB6BB; }
 .social-row { display: flex; gap: 10px; flex-wrap: wrap; }
-.social-row a { width: 38px; height: 38px; border-radius: 8px; display: grid; place-items: center; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); color: #DCEAEC; }
+.social-row a { width: 38px; height: 38px; border-radius: 8px; display: grid; place-items: center; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); color: #DCEAEC; transition: background .2s, color .2s, border-color .2s; }
 .social-row a:hover { background: var(--secondary); color: #fff; border-color: var(--secondary); }
 @media (max-width: 720px) { .footer-grid { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
 
-<!-- ═══ TOPBAR ═══ -->
+
+<!-- ═══════════════════════════════════════════════════════════════
+     NAVIGATION BAR
+     ═══════════════════════════════════════════════════════════════
+     "Outreach" has class="active" — this gives it the amber
+     underline to show it is the current page.
+     ─────────────────────────────────────────────────────────────── -->
 <header class="topbar">
   <div class="topbar-inner">
     <a href="index.html" class="brand">
       <span class="brand-mark">KB</span>
-      <span>Kaushik Nath Bhaumik<small>Ph.D. · Pharmaceutical Sciences</small></span>
+      <span>
+        Kaushik Nath Bhaumik  <!-- ← full name -->
+        <small>Ph.D. · Pharmaceutical Sciences</small>
+      </span>
     </a>
     <button class="menu-btn" id="menuBtn" aria-label="Open menu"><i class="fas fa-bars"></i></button>
     <nav class="nav" id="nav">
-      <a href="about.html">About</a>
+      <a href="index.html">About</a>
       <a href="research.html">Research</a>
-      <a href="outreach.html" class="active">Outreach &amp; Teaching</a>
+      <a href="outreach.html" class="active">Outreach</a>  <!-- ← active = this page -->
       <a href="contact.html">Contact</a>
     </nav>
   </div>
 </header>
 
-<!-- ═══ PAGE HERO ═══ -->
+
+<!-- ═══════════════════════════════════════════════════════════════
+     PAGE HERO  (dark teal banner)
+     ═══════════════════════════════════════════════════════════════
+     TO CHANGE:
+       Small label  → find "Teaching · Outreach · Engagement"
+       Heading      → find "Outreach and Teaching." in the h1
+       Paragraph    → find and edit the <p> text below
+     ─────────────────────────────────────────────────────────────── -->
 <section class="page-hero">
   <div class="container">
+
     <div class="eyebrow">Teaching · Outreach · Engagement</div>
-    <h1>Outreach &amp; Teaching.</h1>
-    <p>Science doesn't end at the lab bench. Alongside my research career I've taught at university level and worked directly with students in the community &mdash; committed to accessible, inclusive education and to the idea that good science communication matters.</p>
+    <!-- ↑ Change the label above the heading if needed -->
+
+    <h1>Outreach and Teaching.</h1>
+    <!-- ↑ Change the main page heading here -->
+
+    <p>
+      Alongside my research career I've
+      taught at university level and worked directly with students in the
+      community - committed to accessible, inclusive education and to the
+      idea that good science communication matters.
+      <!-- ↑ Change this intro paragraph to reflect current activities -->
+    </p>
+
   </div>
 </section>
 
-<!-- ═══ PHILOSOPHY ═══ -->
+
+<!-- ═══════════════════════════════════════════════════════════════
+     SECTION 1: Beyond the lab
+     ═══════════════════════════════════════════════════════════════
+     A short on outreach activities
+     
+     TO CHANGE:
+       Heading      → find "Teaching and Community"
+       Paragraphs   → find and edit the two <p> blocks
+       Quote text   → find the text inside .quote-block <p>
+       Quote credit → find the <cite> line below it
+     ─────────────────────────────────────────────────────────────── -->
 <section class="section">
-  <div class="container" style="max-width: 860px;">
-    <div class="eyebrow">Philosophy</div>
-    <h2 style="margin-top: 8px;">Why I do this alongside research</h2>
-    <p style="font-size: 1.05rem; margin-top: 14px;">Research is most valuable when it's communicated well and when the institutions that train future scientists are equitable and welcoming. Teaching gives me the chance to share the excitement of pharmaceutical science with the next generation. The exam invigilation work at City College Norwich keeps me grounded in the real, day-to-day experiences of students who deserve a fair chance &mdash; regardless of their learning needs or background.</p>
-    <p>Both roles reinforce each other: the attention to detail I bring to analytical chemistry translates directly into creating structured, fair assessment conditions; and the curiosity I try to spark in students feeds back into my own drive to keep learning.</p>
+  <div class="container" style="max-width:860px;">
 
-    <div class="quote-block">
-      <p>"The smallest adjustments in how we assess and teach can make the biggest difference to an anxious student on exam day."</p>
-      <cite>— Kaushik Nath Bhaumik</cite>
-    </div>
+    <div class="eyebrow">Beyond the Lab</div>
+    <h2 style="margin-top:8px;">Teaching and Community</h2>
+    <!-- ↑ Change this heading if needed -->
+
+    <!-- Paragraph 1 -->
+    <p style="font-size:1.05rem; margin-top:14px;">
+      Alongside my research work, I'm passionate about the people-side of education. 
+      At City College Norwich I support exam delivery for a diverse student body — including 
+      learners with special educational needs and additional access requirements — ensuring 
+      fair, calm and inclusive conditions on the day.
+
+      <!-- ↑ Change this paragraph to reflect current motivations -->
+    </p>
+
+    <!-- Paragraph 2 -->
+    <p>
+      The role gives me a clear view of the administrative challenges institutions face 
+      in delivering accessible assessment, and a deep appreciation for the small choices 
+      that make a big difference to anxious students. It keeps my academic work grounded
+       in the lived realities of the people learning around me.
+
+    </p>
+
+
   </div>
 </section>
 
-<!-- ═══ UEA TEACHING ═══ -->
+
+<!-- ═══════════════════════════════════════════════════════════════
+     SECTION 2: UEA TEACHING ROLE
+     ═══════════════════════════════════════════════════════════════
+     A two-column layout:
+       Left  →  institution visual panel + three stat boxes
+       Right →  dates, title, org, description, responsibilities,
+                concurrent research note, keyword chips
+
+     HOW THE LAYOUT WORKS:
+       .role-block        = the two-column grid wrapper
+       .role-visual       = the coloured illustrated panel (left)
+       .stat-strip        = the three mini stat boxes (left, below)
+       .role-label        = small mono date/type text (right)
+       .role-title        = large role title (right)
+       .role-org          = institution name (right)
+       .resp-list         = bullet list of responsibilities (right)
+
+     ── THINGS TO EDIT ON THE LEFT SIDE ──────────────────────────
+
+     VISUAL PANEL BACKGROUND COLOUR:
+       The UEA panel uses a teal gradient. Change the two
+       colour values in style="background: linear-gradient(...)"
+       on the .role-visual div to change the background.
+
+     VISUAL PANEL ICON:
+       Find <i class="fas fa-chalkboard-user"></i> and change
+       the icon class. Browse icons at fontawesome.com/icons.
+
+     VISUAL PANEL INSTITUTION NAME:
+       Find "University of East Anglia" inside the panel and
+       change it.
+
+     STAT BOXES:
+       Each .stat-mini has a big number/abbreviation (.val) and
+       a small label (.lbl). Change the text in each to reflect
+       the role. The colour of .val defaults to teal (--primary);
+       add style="color:var(--secondary)" to make it amber.
+
+     ── THINGS TO EDIT ON THE RIGHT SIDE ─────────────────────────
+
+     DATE/TYPE LINE  → find .role-label and change the text
+     ROLE TITLE      → find .role-title and change the text
+     INSTITUTION     → find .role-org and change the text
+     DESCRIPTION     → find and edit the <p> paragraph
+     RESPONSIBILITIES → add, remove or edit <li> items in
+                        the .resp-list unordered list
+     CHIPS           → add/remove <span class="chip"> tags
+
+     TO ADD A RESPONSIBILITY:
+       Copy one <li>...</li> line inside .resp-list and paste
+       it, then change the text.
+     TO REMOVE ONE: delete the whole <li>...</li> line.
+     ─────────────────────────────────────────────────────────────── -->
 <section class="section alt">
   <div class="container">
     <div class="section-head">
       <div>
-        <div class="eyebrow">University teaching</div>
-        <h2>Lecturer in Drug Delivery &amp; Pharmaceutics</h2>
+        <div class="eyebrow">University teaching</div>  <!-- ← section label -->
+        <h2>Lecturer in Drug Delivery and Pharmaceutics</h2>  <!-- ← section heading -->
       </div>
-      <div class="mono" style="font-size:12px; color:var(--ink-3); text-transform:uppercase; letter-spacing:.08em;">Feb – Jul 2025</div>
+      <div class="mono" style="font-size:12px; color:var(--ink-3); text-transform:uppercase; letter-spacing:.08em;">
+        Feb – Jul 2025  <!-- ← date shown top-right -->
+      </div>
     </div>
 
     <div class="role-block">
+
+      <!-- LEFT: visual panel -->
       <div>
+
+        <!-- Institution visual panel
+             Background is a teal gradient (primary colours).
+             Change the gradient colours or icon as described above. -->
         <div class="role-visual" style="background: linear-gradient(135deg, var(--primary), var(--primary-700));">
           <div class="role-visual-inner">
-            <i class="fas fa-chalkboard-user"></i>
-            <div style="font-family: var(--font-display); font-size: 1.3rem; font-weight: 600;">University of East Anglia</div>
-            <div class="mono" style="font-size: 10px; letter-spacing: .16em; opacity: .75; text-transform: uppercase; margin-top: 4px;">Norwich, UK</div>
+            <i class="fas fa-chalkboard-user"></i>  <!-- ← icon -->
+            <div style="font-family:var(--font-display); font-size:1.3rem; font-weight:600;">
+              University of East Anglia  <!-- ← institution name on the panel -->
+            </div>
+            <div class="mono" style="font-size:10px; letter-spacing:.16em; opacity:.75; text-transform:uppercase; margin-top:4px;">
+              Norwich, UK  <!-- ← location on the panel -->
+            </div>
           </div>
           <div class="dot-overlay"></div>
         </div>
 
-        <div class="stat-strip">
-          <div class="stat-mini"><div class="val">2</div><div class="lbl">Degree programmes</div></div>
-          <div class="stat-mini"><div class="val">6</div><div class="lbl">months</div></div>
-          <div class="stat-mini"><div class="val">PT</div><div class="lbl">Part-time role</div></div>
-        </div>
-      </div>
 
+      <!-- RIGHT: role details -->
       <div>
+
+        <!-- Date and employment type -->
         <span class="role-label">Feb 2025 – Jul 2025 · Part-time</span>
-        <div class="role-title">Lecturer in Drug Delivery &amp; Pharmaceutics</div>
+        <!-- ↑ Change dates and type here -->
+
+        <!-- Role title -->
+        <div class="role-title">Lecturer in Drug Delivery and Pharmaceutics</div>
+        <!-- ↑ Change the role title here -->
+
+        <!-- Institution and school -->
         <div class="role-org">University of East Anglia · School of Pharmacy · Norwich, UK</div>
+        <!-- ↑ Change the institution name and location here -->
 
-        <p>Held a part-time Lecturer position at UEA's School of Pharmacy, contributing to teaching on the M.Pharm. and B.Sc. Pharmacology &amp; Drug Discovery degree programmes while simultaneously conducting research on oral delivery of weight-loss peptide drugs.</p>
+        <!-- Description paragraph -->
+        <p>
+          Held a part-time Lecturer position at UEA's School of Pharmacy,
+          contributing to teaching on the M.Pharm. and B.Sc. Pharmacology and
+          Drug Discovery degree programmes while simultaneously conducting research
+          on oral delivery of weight-loss peptide drugs.
+          <!-- ↑ Change this overview paragraph as needed -->
+        </p>
 
-        <h3 style="font-size: 1rem; color: var(--ink-3); font-family: var(--font-mono); letter-spacing: .08em; text-transform: uppercase; font-weight: 500; margin: 20px 0 12px;">Teaching responsibilities</h3>
+        <!-- Responsibilities sub-heading — styled as a small mono label -->
+        <h3 style="font-size:1rem; color:var(--ink-3); font-family:var(--font-mono); letter-spacing:.08em; text-transform:uppercase; font-weight:500; margin:20px 0 12px;">
+          Teaching responsibilities
+          <!-- ↑ Change this sub-heading label if needed -->
+        </h3>
+
+        <!-- Bullet list of responsibilities
+             Each <li> is one bullet point with an amber dot.
+             TO ADD: copy a <li>...</li> line and paste it, then edit the text.
+             TO REMOVE: delete the whole <li>...</li> line. -->
         <ul class="resp-list">
-          <li>Delivered lectures, seminars, tutorials and laboratory practicals in Pharmaceutics on M.Pharm. and B.Sc. Pharmacology &amp; Drug Discovery degrees</li>
+          <li>Delivered lectures, seminars, tutorials and laboratory practicals in Pharmaceutics on M.Pharm. and B.Sc. Pharmacology and Drug Discovery degrees</li>
           <li>Contributed to curriculum development: designed teaching and learning materials and collaborated on module organisation with academic colleagues</li>
           <li>Assessed students according to prescribed specifications, including marking examinations and providing written and oral feedback</li>
           <li>Undertook all administrative and academic duties required to sustain high-quality teaching delivery</li>
           <li>Supervised undergraduate project students on formulation and drug delivery topics</li>
         </ul>
 
-        <h3 style="font-size: 1rem; color: var(--ink-3); font-family: var(--font-mono); letter-spacing: .08em; text-transform: uppercase; font-weight: 500; margin: 20px 0 12px;">Concurrent research</h3>
-        <p>Alongside teaching, conducted research activities focused on the development of oral delivery strategies for biologics (peptides and proteins), specifically 3D-printed polymeric capsules for weight-loss peptide drugs &mdash; directly informing the pharmaceutical content delivered in lectures.</p>
+        <!-- Second sub-heading for concurrent research note -->
+        <h3 style="font-size:1rem; color:var(--ink-3); font-family:var(--font-mono); letter-spacing:.08em; text-transform:uppercase; font-weight:500; margin:20px 0 12px;">
+          Concurrent research
+        </h3>
 
-        <div class="tag-list" style="margin-top: 16px;">
+        <!-- Concurrent research paragraph -->
+        <p>
+          Alongside teaching, conducted research activities focused on the
+          development of oral delivery strategies for biologics (peptides and
+          proteins), specifically 3D-printed polymeric capsules for weight-loss
+          peptide drugs - directly informing the pharmaceutical content
+          delivered in lectures.
+          <!-- ↑ Change or remove this paragraph as needed -->
+        </p>
+
+        <!-- Keyword chips
+             TO ADD: copy a <span class="chip">...</span> and paste it.
+             TO REMOVE: delete the whole <span> line. -->
+        <div class="tag-list" style="margin-top:16px;">
           <span class="chip">Pharmaceutics</span>
           <span class="chip">Drug Delivery</span>
           <span class="chip">M.Pharm.</span>
@@ -267,93 +439,178 @@ a:hover { color: var(--secondary); }
           <span class="chip">Curriculum design</span>
           <span class="chip">Student supervision</span>
         </div>
+
       </div>
-    </div>
+      <!-- end right column -->
+
+    </div><!-- end role-block -->
   </div>
 </section>
 
-<!-- ═══ CITY COLLEGE NORWICH ═══ -->
+
+<!-- ═══════════════════════════════════════════════════════════════
+     SECTION 3: CITY COLLEGE NORWICH ROLE
+     ═══════════════════════════════════════════════════════════════
+     Same two-column layout as the UEA section above.
+
+     Left  →  amber visual panel 
+     Right →  dates, title, org, description, responsibilities,
+              a pull-quote, keyword chips
+
+     Follow the same editing instructions as Section 2 above.
+     The main differences here are:
+       • The visual panel uses an amber gradient (--secondary colours)
+       • The stat box numbers are coloured amber (style="color:var(--secondary)")
+       • There is an additional pull-quote block at the bottom
+
+     PULL QUOTE:
+       Change the text inside the .quote-block <p> tags.
+       Change the attribution inside <cite>.
+     ─────────────────────────────────────────────────────────────── -->
 <section class="section">
   <div class="container">
     <div class="section-head">
       <div>
         <div class="eyebrow">Community engagement</div>
-        <h2>Exam Invigilator &amp; Administrator</h2>
+        <h2>Exam Invigilator and Administrator</h2>
       </div>
-      <div class="mono" style="font-size:12px; color:var(--ink-3); text-transform:uppercase; letter-spacing:.08em;">May 2024 – Present</div>
+      <div class="mono" style="font-size:12px; color:var(--ink-3); text-transform:uppercase; letter-spacing:.08em;">
+        May 2024 – Present
+        <!-- ↑ Update the date when this role ends -->
+      </div>
     </div>
 
     <div class="role-block">
+
+      <!-- LEFT: amber visual panel  -->
       <div>
+
+        <!-- Institution visual panel — amber gradient -->
         <div class="role-visual" style="background: linear-gradient(135deg, var(--secondary), var(--secondary-300));">
           <div class="role-visual-inner">
-            <i class="fas fa-user-graduate"></i>
-            <div style="font-family: var(--font-display); font-size: 1.3rem; font-weight: 600;">City College Norwich</div>
-            <div class="mono" style="font-size: 10px; letter-spacing: .16em; opacity: .8; text-transform: uppercase; margin-top: 4px;">Norwich, UK</div>
+            <i class="fas fa-user-graduate"></i>  <!-- ← icon -->
+            <div style="font-family:var(--font-display); font-size:1.3rem; font-weight:600;">
+              City College Norwich  <!-- ← institution name on the panel -->
+            </div>
+            <div class="mono" style="font-size:10px; letter-spacing:.16em; opacity:.8; text-transform:uppercase; margin-top:4px;">
+              Norwich, UK
+            </div>
           </div>
           <div class="dot-overlay"></div>
         </div>
 
-        <div class="stat-strip">
-          <div class="stat-mini"><div class="val" style="color:var(--secondary)">2+</div><div class="lbl">Years</div></div>
-          <div class="stat-mini"><div class="val" style="color:var(--secondary)">SEN</div><div class="lbl">Special needs support</div></div>
-          <div class="stat-mini"><div class="val" style="color:var(--secondary)">Both</div><div class="lbl">Paper &amp; computer exams</div></div>
-        </div>
-      </div>
+        
 
+      <!-- RIGHT: role details -->
       <div>
+
         <span class="role-label">May 2024 – Present · Variable hours</span>
-        <div class="role-title">Exam Invigilator &amp; Administrator</div>
+        <!-- ↑ Change dates and type here -->
+
+        <div class="role-title">Exam Invigilator and Administrator</div>
+        <!-- ↑ Change the role title here -->
+
         <div class="role-org">City College Norwich · Norwich, UK</div>
+        <!-- ↑ Change the institution here -->
 
-        <p>Alongside my research and teaching work, I support exam delivery at City College Norwich &mdash; a further education college serving a diverse community of learners. The role connects my scientific precision with a genuine commitment to educational equity and student welfare.</p>
+        <!-- Description paragraph -->
+        <p>
+          Alongside my research and teaching work, I support exam delivery at
+          City College Norwich - a further education college serving a
+          diverse community of learners. The role connects my scientific precision
+          with a genuine commitment to educational equity and student welfare.
+          <!-- ↑ Change this overview paragraph as needed -->
+        </p>
 
-        <h3 style="font-size: 1rem; color: var(--ink-3); font-family: var(--font-mono); letter-spacing: .08em; text-transform: uppercase; font-weight: 500; margin: 20px 0 12px;">Responsibilities</h3>
+        <!-- Responsibilities sub-heading -->
+        <h3 style="font-size:1rem; color:var(--ink-3); font-family:var(--font-mono); letter-spacing:.08em; text-transform:uppercase; font-weight:500; margin:20px 0 12px;">
+          Responsibilities
+        </h3>
+
+        <!-- Responsibilities list -->
         <ul class="resp-list">
           <li>Invigilated paper-based and computer-based examinations, ensuring full compliance with regulations and maintaining exam security throughout</li>
           <li>Prepared exam rooms, distributed materials, and provided clear candidate instructions to ensure an organised and calm assessment environment</li>
           <li>Monitored candidates to prevent academic misconduct and addressed issues promptly and professionally</li>
-          <li>Acted as <strong>scribe and reader for students with special educational needs (SEN)</strong> and additional access requirements &mdash; transcribing responses and reading questions aloud to enable equal participation</li>
+          <li>Acted as <strong>scribe and reader for students with special educational needs (SEN)</strong> and additional access requirements - transcribing responses and reading questions aloud to enable equal participation</li>
           <li>Supported students with learning disabilities, physical disabilities and other access needs in a sensitive, professional and confidential manner</li>
           <li>Contributed to administrative tasks: documentation, candidate registers and compliance records</li>
         </ul>
 
-        <div class="quote-block" style="margin-top: 24px;">
-          <p>"Supporting a student with special needs through an exam is one of the most direct ways I can contribute to educational equity. Every student deserves the conditions to do their best work."</p>
-          <cite>— On the City College Norwich role</cite>
-        </div>
-
-        <div class="tag-list" style="margin-top: 16px;">
+    
+        <!-- Keyword chips -->
+        <div class="tag-list" style="margin-top:16px;">
           <span class="chip">Inclusive assessment</span>
           <span class="chip">SEN support</span>
-          <span class="chip">Scribe &amp; reader</span>
+          <span class="chip">Scribe and reader</span>
           <span class="chip">Exam compliance</span>
           <span class="chip">Student welfare</span>
           <span class="chip">Administrative ops</span>
           <span class="chip">Educational equity</span>
         </div>
+
       </div>
-    </div>
+      <!-- end right column -->
+
+    </div><!-- end role-block -->
   </div>
 </section>
 
-<!-- ═══ VALUES / CTA ═══ -->
-<section class="section alt" style="padding: 64px 0;">
-  <div class="container" style="text-align: center; max-width: 760px;">
-    <div class="eyebrow" style="justify-content: center;">Get in touch</div>
-    <h2 style="margin-top: 8px;">Interested in teaching or outreach collaborations?</h2>
-    <p style="font-size: 1.05rem;">I'm open to guest lectures, seminar contributions, undergraduate project supervision and other teaching or public-engagement opportunities in pharmaceutical sciences, analytical chemistry and drug delivery.</p>
-    <a href="contact.html" class="btn btn-primary" style="margin-top: 8px;"><i class="fas fa-paper-plane"></i> Start a conversation</a>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     SECTION 4: CALL TO ACTION  (get in touch)
+     ═══════════════════════════════════════════════════════════════
+     A centred band inviting visitors to get in touch about
+     teaching or outreach opportunities.
+
+     TO CHANGE:
+       Heading    → find "Interested in teaching or outreach collaborations?"
+       Paragraph  → find and edit the <p> text
+       Button     → find the .btn line; change the label or the
+                    href="contact.html" link if needed
+     ─────────────────────────────────────────────────────────────── -->
+<section class="section alt" style="padding:64px 0;">
+  <div class="container" style="text-align:center; max-width:760px;">
+
+    <div class="eyebrow" style="justify-content:center;">Get in touch</div>
+    <!-- ↑ Change the small label above the heading if needed -->
+
+    <h2 style="margin-top:8px;">Interested in teaching or outreach collaborations?</h2>
+    <!-- ↑ Change this heading -->
+
+    <p style="font-size:1.05rem;">
+      Open to guest lectures, seminar contributions, undergraduate project
+      supervision and other teaching or public-engagement opportunities in
+      pharmaceutical sciences, analytical chemistry and drug delivery.
+      <!-- ↑ Change this paragraph to reflect current availability -->
+    </p>
+
+    <!-- Button linking to the contact page -->
+    <a href="contact.html" class="btn btn-primary" style="margin-top:8px;">
+      <i class="fas fa-paper-plane"></i> Start a conversation
+      <!-- ↑ Change the button label if needed -->
+    </a>
+
   </div>
 </section>
 
-<!-- ═══ FOOTER ═══ -->
+
+<!-- ═══════════════════════════════════════════════════════════════
+     FOOTER — same dark teal footer used on every page.
+     If a link or email changes, update it here and on every
+     other page too (use Ctrl+F across all files).
+     ─────────────────────────────────────────────────────────────── -->
 <footer class="footer">
   <div class="container">
     <div class="footer-grid">
+
+      <!-- Column 1: name, tagline, social icons -->
       <div>
         <h4>Kaushik Nath Bhaumik, Ph.D.</h4>
-        <p style="color:#9DB6BB; max-width:46ch;">Pharmaceutical scientist working on peptide chemistry, drug delivery and analytical methods. Based in Norwich, United Kingdom.</p>
+        <p style="color:#9DB6BB; max-width:46ch;">
+          Pharmaceutical scientist working on peptide chemistry, drug delivery
+          and analytical methods. Based in Norwich, United Kingdom.
+        </p>
         <div class="social-row" style="margin-top:14px;">
           <a href="mailto:kaushiknb9@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
           <a href="https://scholar.google.com/citations?user=DrMMYFoAAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
@@ -361,37 +618,54 @@ a:hover { color: var(--secondary); }
           <a href="https://www.linkedin.com/in/kaushik-nath-bhaumik-2a4a73bb/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
           <a href="https://x.com/kaushik_nb" target="_blank" rel="noopener" aria-label="X / Twitter"><i class="fab fa-x-twitter"></i></a>
           <a href="https://github.com/kaushik-nb" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
-          <a href="docs/Kaushik_Nath_Bhaumik_Resume_2026-05-05.pdf" target="_blank" rel="noopener" aria-label="Download CV"><i class="fas fa-file-pdf"></i></a>
         </div>
       </div>
+
+      <!-- Column 2: page links -->
       <div>
         <h4>Site</h4>
         <ul style="list-style:none; padding:0; margin:0; display:grid; gap:6px;">
-          <li><a href="about.html">About</a></li>
+          <li><a href="index.html">About</a></li>
           <li><a href="research.html">Research</a></li>
-          <li><a href="outreach.html">Outreach &amp; Teaching</a></li>
+          <li><a href="outreach.html">Outreach</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
+
+      <!-- Column 3: contact details -->
       <div>
         <h4>Contact</h4>
         <ul style="list-style:none; padding:0; margin:0; display:grid; gap:6px;">
-          <li><i class="fas fa-envelope" style="margin-right:8px; color:var(--secondary-300);"></i> kaushiknb9@gmail.com</li>
-          <li><i class="fas fa-location-dot" style="margin-right:8px; color:var(--secondary-300);"></i> Norwich, UK</li>
+          <li>
+            <i class="fas fa-envelope" style="margin-right:8px; color:var(--secondary-300);"></i>
+            kaushiknb9@gmail.com  <!-- ← email address -->
+          </li>
+          <li>
+            <i class="fas fa-location-dot" style="margin-right:8px; color:var(--secondary-300);"></i>
+            Norwich, UK  <!-- ← city / country -->
+          </li>
         </ul>
       </div>
+
     </div>
+
+    <!-- Copyright line -->
     <div class="footer-bottom">
-      <div>© 2026 Kaushik Nath Bhaumik · All rights reserved</div>
-      <div>Built with HTML &amp; CSS · Hosted on GitHub Pages</div>
+      <div>&copy; 2026 Kaushik Nath Bhaumik . All rights reserved</div>
+      <!-- ↑ Update the year when needed -->
+      <div>Built with HTML and CSS . Hosted on GitHub Pages</div>
     </div>
+
   </div>
 </footer>
 
+
+<!-- Mobile menu toggle — do not edit -->
 <script>
   document.getElementById('menuBtn').addEventListener('click', () => {
     document.getElementById('nav').classList.toggle('open');
   });
 </script>
+
 </body>
 </html>
