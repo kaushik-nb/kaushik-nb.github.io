@@ -243,13 +243,12 @@ a:hover { color: var(--secondary); }
 <!-- ═══════════════════════════════════════════════════════════════
      SECTION 1: Beyond the lab
      ═══════════════════════════════════════════════════════════════
-     A short on outreach activities
+     A short summary of outreach
+     activities alongside research
      
      TO CHANGE:
        Heading      → find "Teaching and Community"
        Paragraphs   → find and edit the two <p> blocks
-       Quote text   → find the text inside .quote-block <p>
-       Quote credit → find the <cite> line below it
      ─────────────────────────────────────────────────────────────── -->
 <section class="section">
   <div class="container" style="max-width:860px;">
@@ -349,7 +348,7 @@ a:hover { color: var(--secondary); }
 
     <div class="role-block">
 
-      <!-- LEFT: visual panel -->
+      <!-- LEFT: visual panel + stat boxes -->
       <div>
 
         <!-- Institution visual panel
@@ -367,6 +366,26 @@ a:hover { color: var(--secondary); }
           </div>
           <div class="dot-overlay"></div>
         </div>
+
+        <!-- Three stat boxes below the visual panel -->
+        <!-- Change .val for the number/abbreviation and .lbl for the label -->
+        <div class="stat-strip">
+          <div class="stat-mini">
+            <div class="val">2</div>          <!-- ← big number or abbreviation -->
+            <div class="lbl">Degree programmes</div>  <!-- ← description label -->
+          </div>
+          <div class="stat-mini">
+            <div class="val">6</div>
+            <div class="lbl">Months</div>
+          </div>
+          <div class="stat-mini">
+            <div class="val">PT</div>
+            <div class="lbl">Part-time role</div>
+          </div>
+        </div>
+
+      </div>
+      <!-- end left column -->
 
 
       <!-- RIGHT: role details -->
@@ -453,7 +472,7 @@ a:hover { color: var(--secondary); }
      ═══════════════════════════════════════════════════════════════
      Same two-column layout as the UEA section above.
 
-     Left  →  amber visual panel 
+     Left  →  amber visual panel + three stat boxes
      Right →  dates, title, org, description, responsibilities,
               a pull-quote, keyword chips
 
@@ -482,7 +501,7 @@ a:hover { color: var(--secondary); }
 
     <div class="role-block">
 
-      <!-- LEFT: amber visual panel  -->
+      <!-- LEFT: amber visual panel + stat boxes -->
       <div>
 
         <!-- Institution visual panel — amber gradient -->
@@ -499,7 +518,25 @@ a:hover { color: var(--secondary); }
           <div class="dot-overlay"></div>
         </div>
 
-        
+        <!-- Stat boxes — amber colour applied to .val with inline style -->
+        <div class="stat-strip">
+          <div class="stat-mini">
+            <div class="val" style="color:var(--secondary)">2+</div>
+            <div class="lbl">Years</div>
+          </div>
+          <div class="stat-mini">
+            <div class="val" style="color:var(--secondary)">SEN</div>
+            <div class="lbl">Special needs support</div>
+          </div>
+          <div class="stat-mini">
+            <div class="val" style="color:var(--secondary)">Both</div>
+            <div class="lbl">Paper and computer exams</div>
+          </div>
+        </div>
+
+      </div>
+      <!-- end left column -->
+
 
       <!-- RIGHT: role details -->
       <div>
@@ -537,7 +574,7 @@ a:hover { color: var(--secondary); }
           <li>Contributed to administrative tasks: documentation, candidate registers and compliance records</li>
         </ul>
 
-    
+        
         <!-- Keyword chips -->
         <div class="tag-list" style="margin-top:16px;">
           <span class="chip">Inclusive assessment</span>
