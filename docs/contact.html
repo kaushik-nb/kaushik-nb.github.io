@@ -3,14 +3,46 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!--
+  ╔══════════════════════════════════════════════════════════════════╗
+  ║           KAUSHIK NATH BHAUMIK — CONTACT PAGE                   ║
+  ║                                                                  ║
+  ║  This file lives in docs/ alongside index.html and the          ║
+  ║  other pages.                                                    ║
+  ║                                                                  ║
+  ║  HOW TO EDIT                                                     ║
+  ║  ─────────────────────────────────────────────────────────────   ║
+  ║  Change any text that sits between > and <                       ║
+  ║  Do not touch anything inside < > angle brackets.               ║
+  ║  Use Ctrl+F (or Cmd+F on Mac) to search for any word            ║
+  ║  to find and update it.                                          ║
+  ╚══════════════════════════════════════════════════════════════════╝
+-->
+
+<!-- Browser tab title -->
 <title>Contact — Kaushik Nath Bhaumik, Ph.D.</title>
+
+<!-- Google search description (not visible on the page itself) -->
 <meta name="description" content="Get in touch with Kaushik Nath Bhaumik, Ph.D. — open to research collaborations, postdoc positions, industrial consulting and teaching opportunities." />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+<!-- Icons and fonts — do not edit these lines -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<!-- ───────────────────────────────────────────────────────────────
+     STYLES — controls colours, fonts, spacing. No need to edit
+     unless changing the colour scheme.
+
+     COLOUR GUIDE:
+       --primary   #0F4C5C  →  deep teal (headings, buttons)
+       --secondary #C18C2C  →  amber/gold (accents, labels)
+       --accent    #B33A3A  →  brick red (used sparingly)
+       --bg        #FBF8F1  →  cream page background
+     ─────────────────────────────────────────────────────────────── -->
 <style>
-/* ── Variables ── */
 :root {
   --primary:       #0F4C5C;
   --primary-700:   #0A3845;
@@ -33,7 +65,6 @@
   --font-mono:     'JetBrains Mono', ui-monospace, monospace;
   --shadow-sm: 0 1px 2px rgba(15,76,92,0.08);
   --shadow-md: 0 6px 18px rgba(15,76,92,0.10);
-  --shadow-lg: 0 18px 40px rgba(15,76,92,0.14);
   --radius-sm: 4px; --radius: 8px; --radius-lg: 14px;
 }
 * { box-sizing: border-box; }
@@ -53,14 +84,7 @@ a  { color: var(--primary); text-decoration: none; transition: color .2s; }
 a:hover { color: var(--secondary); }
 .container { max-width: 1200px; margin: 0 auto; padding: 0 28px; }
 .mono { font-family: var(--font-mono); }
-
-/* ── Topbar ── */
-.topbar {
-  position: sticky; top: 0; z-index: 50;
-  background: rgba(251,248,241,0.93);
-  backdrop-filter: saturate(140%) blur(8px);
-  border-bottom: 1px solid var(--line);
-}
+.topbar { position: sticky; top: 0; z-index: 50; background: rgba(251,248,241,0.93); backdrop-filter: saturate(140%) blur(8px); border-bottom: 1px solid var(--line); }
 .topbar-inner { display: flex; align-items: center; justify-content: space-between; padding: 14px 28px; max-width: 1200px; margin: 0 auto; }
 .brand { display: flex; align-items: center; gap: 12px; font-family: var(--font-display); font-weight: 700; font-size: 1.05rem; color: var(--primary); text-decoration: none; }
 .brand-mark { width: 34px; height: 34px; display: grid; place-items: center; background: var(--primary); color: #fff; border-radius: 6px; font-family: var(--font-mono); font-size: 0.85rem; font-weight: 600; }
@@ -76,27 +100,17 @@ a:hover { color: var(--secondary); }
   .nav.open { display: flex; flex-direction: column; align-items: stretch; position: absolute; top: 64px; left: 16px; right: 16px; background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 8px; gap: 2px; box-shadow: var(--shadow-md); }
   .menu-btn { display: inline-flex; }
 }
-
-/* ── Buttons ── */
 .btn { display: inline-flex; align-items: center; gap: 8px; padding: 11px 18px; border-radius: var(--radius); font-weight: 600; font-size: 0.94rem; border: 1px solid transparent; cursor: pointer; transition: transform .2s, background .2s, color .2s, border-color .2s; text-decoration: none; }
 .btn-primary { background: var(--primary); color: #fff; }
 .btn-primary:hover { background: var(--primary-700); color: #fff; transform: translateY(-2px); }
-.btn-secondary { background: var(--secondary); color: #fff; }
-.btn-secondary:hover { background: #A1751F; color: #fff; transform: translateY(-2px); }
-.btn-outline { background: transparent; color: var(--primary); border-color: var(--primary); }
-.btn-outline:hover { background: var(--primary); color: #fff; transform: translateY(-2px); }
 .btn-ghost { background: transparent; color: var(--ink); border-color: var(--line); }
 .btn-ghost:hover { background: var(--bg-alt); }
-
-/* ── Eyebrow ── */
 .eyebrow { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--secondary); }
 .eyebrow::before { content: ''; width: 24px; height: 1px; background: var(--secondary); }
-
-/* ── Section ── */
 .section { padding: 72px 0; }
-.section.alt { background: var(--bg-alt); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.divider { border: none; border-top: 1px solid var(--line); margin: 36px 0; }
 
-/* ── Page hero ── */
+/* Dark hero banner at the top of the page */
 .page-hero {
   background: var(--bg-dark);
   background-image:
@@ -111,81 +125,48 @@ a:hover { color: var(--secondary); }
 .page-hero h1 { color: #fff; margin-top: 10px; }
 .page-hero p { color: #B8CED2; max-width: 60ch; margin-top: 10px; font-size: 1.08rem; }
 
-/* ── Contact card links ── */
+/* Contact link cards (email, location, CV) */
 .contact-link {
   display: flex; align-items: center; gap: 18px;
   background: var(--bg-card); border: 1px solid var(--line);
   border-radius: var(--radius-lg); padding: 20px 24px;
-  box-shadow: var(--shadow-sm); text-decoration: none;
-  color: inherit;
+  box-shadow: var(--shadow-sm); text-decoration: none; color: inherit;
   transition: transform .22s, box-shadow .22s, border-color .22s;
 }
 .contact-link:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: var(--primary-300); color: inherit; }
-.contact-link .cl-icon {
-  width: 48px; height: 48px; border-radius: 10px;
-  display: grid; place-items: center; color: #fff;
-  font-size: 1.1rem; flex-shrink: 0;
-}
+.contact-link .cl-icon { width: 48px; height: 48px; border-radius: 10px; display: grid; place-items: center; color: #fff; font-size: 1.1rem; flex-shrink: 0; }
 .contact-link .cl-label { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 3px; }
 .contact-link .cl-value { font-weight: 700; color: var(--ink); font-size: 0.97rem; }
 
-/* ── Social grid ── */
+/* Social profile cards grid */
 .social-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
 .social-card {
   display: flex; flex-direction: column; align-items: center; gap: 8px;
   background: var(--bg-card); border: 1px solid var(--line);
   border-radius: var(--radius-lg); padding: 20px 12px;
-  text-decoration: none; color: var(--ink);
-  box-shadow: var(--shadow-sm);
-  transition: transform .22s, box-shadow .22s, border-color .22s, background .22s;
+  text-decoration: none; color: var(--ink); box-shadow: var(--shadow-sm);
+  transition: transform .22s, box-shadow .22s;
 }
 .social-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); color: var(--ink); }
 .social-card .sc-icon { width: 44px; height: 44px; border-radius: 10px; display: grid; place-items: center; font-size: 1.15rem; color: #fff; }
 .social-card .sc-name { font-weight: 700; font-size: 0.88rem; color: var(--ink); }
 .social-card .sc-handle { font-family: var(--font-mono); font-size: 10px; color: var(--ink-3); letter-spacing: 0.06em; }
 
-/* ── Open to Work block ── */
+/* "Open to work" rows on the right side */
 .otw-block {
-  padding: 20px 0;
-  border-bottom: 1px solid var(--line);
-  display: grid;
-  grid-template-columns: 220px 1fr;
-  gap: 16px;
-  align-items: center;
+  padding: 20px 0; border-bottom: 1px solid var(--line);
+  display: grid; grid-template-columns: 220px 1fr;
+  gap: 16px; align-items: center;
 }
 .otw-block:first-of-type { border-top: 1px solid var(--line); }
-.otw-label {
-  font-family: var(--font-mono);
-  font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase;
-  color: var(--ink-3);
-  display: flex; align-items: center; gap: 8px;
-}
+.otw-label { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-3); display: flex; align-items: center; gap: 8px; }
 .otw-label i { color: var(--secondary); width: 14px; text-align: center; }
 .otw-chips { display: flex; flex-wrap: wrap; gap: 8px; }
-.otw-chip {
-  display: inline-flex; align-items: center;
-  padding: 6px 14px; border-radius: 999px;
-  background: var(--bg-card); border: 1px solid var(--line-2);
-  color: var(--ink); font-size: 0.88rem; font-weight: 500;
-  box-shadow: var(--shadow-sm);
-}
-.otw-chip-highlight {
-  background: rgba(15,76,92,0.08);
-  border-color: var(--primary-300);
-  color: var(--primary);
-  font-weight: 600;
-}
-@media (max-width: 640px) {
-  .otw-block { grid-template-columns: 1fr; gap: 8px; }
-}
+.otw-chip { display: inline-flex; align-items: center; padding: 6px 14px; border-radius: 999px; background: var(--bg-card); border: 1px solid var(--line-2); color: var(--ink); font-size: 0.88rem; font-weight: 500; box-shadow: var(--shadow-sm); }
+.otw-chip-highlight { background: rgba(15,76,92,0.08); border-color: var(--primary-300); color: var(--primary); font-weight: 600; }
+@media (max-width: 640px) { .otw-block { grid-template-columns: 1fr; gap: 8px; } }
 
-/* ── Opportunity chips (kept for legacy, unused) ── */
-.opp-grid { display: none; }
-
-/* ── Divider ── */
-.divider { border: none; border-top: 1px solid var(--line); margin: 36px 0; }
-
-/* ── Footer ── */
+/* Footer */
 .footer { background: var(--bg-dark); color: #DCEAEC; padding: 48px 0 28px; }
 .footer h4 { color: #fff; font-family: var(--font-display); margin-bottom: 12px; }
 .footer a { color: #DCEAEC; }
@@ -193,207 +174,412 @@ a:hover { color: var(--secondary); }
 .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; }
 .footer-bottom { margin-top: 36px; padding-top: 18px; border-top: 1px solid rgba(255,255,255,0.12); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-family: var(--font-mono); font-size: 12px; color: #9DB6BB; }
 .social-row { display: flex; gap: 10px; flex-wrap: wrap; }
-.social-row a { width: 38px; height: 38px; border-radius: 8px; display: grid; place-items: center; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); color: #DCEAEC; }
+.social-row a { width: 38px; height: 38px; border-radius: 8px; display: grid; place-items: center; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); color: #DCEAEC; transition: background .2s, color .2s, border-color .2s; }
 .social-row a:hover { background: var(--secondary); color: #fff; border-color: var(--secondary); }
 @media (max-width: 720px) { .footer-grid { grid-template-columns: 1fr; } }
+@media (max-width: 860px) { .main-grid { grid-template-columns: 1fr !important; } }
 </style>
 </head>
 <body>
 
-<!-- ═══ TOPBAR ═══ -->
+
+<!-- ═══════════════════════════════════════════════════════════════
+     NAVIGATION BAR
+     ═══════════════════════════════════════════════════════════════
+     "Contact" has class="active" on this page — that gives it the
+     amber underline to show it is the current page.
+
+     If the nav links on this page ever get out of sync with the
+     rest of the site, update them here to match.
+     ─────────────────────────────────────────────────────────────── -->
 <header class="topbar">
   <div class="topbar-inner">
+
+    <!-- Name / logo in the top-left corner -->
     <a href="index.html" class="brand">
-      <span class="brand-mark">KB</span>
-      <span>Kaushik Nath Bhaumik<small>Ph.D. · Pharmaceutical Sciences</small></span>
+      <span class="brand-mark">KB</span>  <!-- ← change initials if needed -->
+      <span>
+        Kaushik Nath Bhaumik  <!-- ← full name -->
+        <small>Ph.D. · Pharmaceutical Sciences</small>
+      </span>
     </a>
+
     <button class="menu-btn" id="menuBtn" aria-label="Open menu"><i class="fas fa-bars"></i></button>
+
     <nav class="nav" id="nav">
-      <a href="about.html">About</a>
+      <a href="index.html">About</a>
       <a href="research.html">Research</a>
-      <a href="outreach.html">Outreach &amp; Teaching</a>
-      <a href="contact.html" class="active">Contact</a>
+      <a href="outreach.html">Outreach</a>
+      <a href="contact.html" class="active">Contact</a>  <!-- ← active = this page -->
     </nav>
+
   </div>
 </header>
 
-<!-- ═══ PAGE HERO ═══ -->
+
+<!-- ═══════════════════════════════════════════════════════════════
+     PAGE HERO  (dark teal banner at the top)
+     ═══════════════════════════════════════════════════════════════
+     This is the dark intro banner. It has a small label, a heading,
+     and one short sentence.
+
+     TO CHANGE:
+       Small label   → find "Contact" in the eyebrow div
+       Page heading  → find "Contact." in the h1
+       Sentence      → find and edit the <p> paragraph below
+     ─────────────────────────────────────────────────────────────── -->
 <section class="page-hero">
   <div class="container">
-    <div class="eyebrow">Contact</div>
-    <h1>Contact.</h1>
-    <p>Pharmaceutical scientist based in Norwich, UK &mdash; actively applying and available to start immediately. Reach me directly by email or find my profiles below.</p>
+
+    <!-- Small amber label -->
+    <div class="eyebrow">Contact</div>  <!-- ← change label if needed -->
+
+    <!-- Main page heading -->
+    <h1>Contact.</h1>  <!-- ← change heading if needed -->
+
+    <!-- One-line description -->
+    <p>
+      Pharmaceutical scientist based in Norwich, UK - actively applying
+      and available to start immediately. Reach me directly by email or find
+      my profiles below.
+      <!-- ↑ Change this sentence to reflect current status -->
+    </p>
+
   </div>
 </section>
 
-<!-- ═══ MAIN CONTACT SECTION ═══ -->
+
+<!-- ═══════════════════════════════════════════════════════════════
+     MAIN CONTACT SECTION
+     ═══════════════════════════════════════════════════════════════
+     Two columns:
+       Left  →  email card, location card, CV card, social profiles
+       Right →  "Open to work" availability details
+     ─────────────────────────────────────────────────────────────── -->
 <section class="section">
   <div class="container">
-    <div style="display: grid; grid-template-columns: 380px 1fr; gap: 52px; align-items: start;">
+    <div class="main-grid" style="display:grid; grid-template-columns: 380px 1fr; gap: 52px; align-items: start;">
 
-      <!-- ── Left column: direct contact + social ── -->
+
+      <!-- ─────────────────────────────────────────────────────────
+           LEFT COLUMN: DIRECT CONTACT + SOCIAL PROFILES
+           ─────────────────────────────────────────────────────────
+           Three clickable cards at the top (email, location, CV),
+           then a grid of six social profile cards below.
+           ───────────────────────────────────────────────────────── -->
       <aside>
 
-        <!-- Direct contact links -->
+        <!-- Section label and heading -->
         <div class="eyebrow">Direct</div>
-        <h2 style="margin-top: 8px; margin-bottom: 20px;">Email &amp; links</h2>
-        <p style="margin-bottom: 22px;">Email is the fastest route. I typically reply within one to two working days.</p>
+        <h2 style="margin-top:8px; margin-bottom:20px;">Email and links</h2>
+        <p style="margin-bottom:22px;">
+          <!-- ↑ Change this if the reply time or preference changes -->
+        </p>
 
-        <div style="display: flex; flex-direction: column; gap: 12px;">
+
+        <!-- ···················································
+             THREE CONTACT CARDS  (email / location / CV)
+             ···················································
+             Each card is a <a href="..."> or <div> block.
+             Clickable ones use <a href="...">; the location
+             card uses <div> because it has no link.
+
+             TO CHANGE THE EMAIL ADDRESS:
+               Update it in BOTH the href="mailto:..." and
+               the <div class="cl-value"> text below.
+             TO CHANGE THE CV FILE:
+               Update the href="../files/filename.pdf" path.
+             ··················································· -->
+        <div style="display:flex; flex-direction:column; gap:12px;">
+
+          <!-- Card 1: Email — clicking this opens the email app -->
           <a href="mailto:kaushiknb9@gmail.com" class="contact-link">
-            <div class="cl-icon" style="background: var(--primary);"><i class="fas fa-envelope"></i></div>
+            <div class="cl-icon" style="background:var(--primary);">
+              <i class="fas fa-envelope"></i>
+            </div>
             <div>
               <div class="cl-label">Email</div>
               <div class="cl-value">kaushiknb9@gmail.com</div>
+              <!-- ↑ Change email address in BOTH href above and here -->
             </div>
           </a>
 
-          <div class="contact-link" style="cursor: default;">
-            <div class="cl-icon" style="background: var(--secondary);"><i class="fas fa-location-dot"></i></div>
+          <!-- Card 2: Location — not clickable, just informational -->
+          <div class="contact-link" style="cursor:default;">
+            <div class="cl-icon" style="background:var(--secondary);">
+              <i class="fas fa-location-dot"></i>
+            </div>
             <div>
               <div class="cl-label">Location</div>
               <div class="cl-value">Norwich, United Kingdom</div>
+              <!-- ↑ Change city / country here -->
             </div>
           </div>
 
-          <a href="docs/Kaushik_Nath_Bhaumik_Resume_2026-05-05.pdf" target="_blank" rel="noopener" class="contact-link">
-            <div class="cl-icon" style="background: var(--accent);"><i class="fas fa-file-pdf"></i></div>
+          <!-- Card 3: CV — clicking this opens the PDF in a new tab -->
+          <!-- Update the filename in href if the CV file is renamed -->
+          <a href="../files/Kaushik_Nath_Bhaumik_Resume_20260505.pdf"
+             target="_blank" rel="noopener" class="contact-link">
+            <div class="cl-icon" style="background:var(--accent);">
+              <i class="fas fa-file-pdf"></i>
+            </div>
             <div>
               <div class="cl-label">Curriculum Vitae</div>
               <div class="cl-value">Download CV (PDF)</div>
             </div>
           </a>
+
         </div>
+        <!-- end three contact cards -->
 
-        <div class="divider"></div>
 
-        <!-- Social profiles -->
+        <!-- Divider line -->
+        <hr class="divider" />
+
+
+        <!-- ···················································
+             SOCIAL PROFILE CARDS  (6 cards in a 3-column grid)
+             ···················································
+             Each card links to one online profile. It has:
+               href="..."     → the URL of the profile page
+               .sc-icon       → coloured icon circle
+               .sc-name       → platform name shown below icon
+               .sc-handle     → username / short identifier
+
+             TO CHANGE A URL: update the href="..." value.
+             TO CHANGE A USERNAME SHOWN: update the
+               <span class="sc-handle"> text.
+             TO REMOVE A CARD: delete the whole <a ...>...</a>
+               block for that card.
+             ··················································· -->
         <div class="eyebrow">Find me online</div>
-        <h3 style="margin-top: 8px; margin-bottom: 16px;">Profiles</h3>
+        <h3 style="margin-top:8px; margin-bottom:16px;">Profiles</h3>
+
         <div class="social-grid">
 
-          <a href="https://scholar.google.com/citations?user=DrMMYFoAAAAJ&hl=en" target="_blank" rel="noopener" class="social-card">
-            <div class="sc-icon" style="background: #4285F4;"><i class="fas fa-graduation-cap"></i></div>
+          <!-- Google Scholar -->
+          <a href="https://scholar.google.com/citations?user=DrMMYFoAAAAJ&hl=en"
+             target="_blank" rel="noopener" class="social-card">
+            <div class="sc-icon" style="background:#4285F4;">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
             <span class="sc-name">Scholar</span>
             <span class="sc-handle">Google Scholar</span>
           </a>
 
-          <a href="https://www.researchgate.net/profile/Kaushik-Nath-Bhaumik" target="_blank" rel="noopener" class="social-card">
-            <div class="sc-icon" style="background: #00CCBB;"><i class="fab fa-researchgate"></i></div>
+          <!-- ResearchGate -->
+          <a href="https://www.researchgate.net/profile/Kaushik-Nath-Bhaumik"
+             target="_blank" rel="noopener" class="social-card">
+            <div class="sc-icon" style="background:#00CCBB;">
+              <i class="fab fa-researchgate"></i>
+            </div>
             <span class="sc-name">ResearchGate</span>
             <span class="sc-handle">Kaushik-Nath-Bhaumik</span>
+            <!-- ↑ Change the handle text if the profile URL changes -->
           </a>
 
-          <a href="https://www.linkedin.com/in/kaushik-nath-bhaumik-2a4a73bb/" target="_blank" rel="noopener" class="social-card">
-            <div class="sc-icon" style="background: #0A66C2;"><i class="fab fa-linkedin"></i></div>
+          <!-- LinkedIn -->
+          <a href="https://www.linkedin.com/in/kaushik-nath-bhaumik-2a4a73bb/"
+             target="_blank" rel="noopener" class="social-card">
+            <div class="sc-icon" style="background:#0A66C2;">
+              <i class="fab fa-linkedin"></i>
+            </div>
             <span class="sc-name">LinkedIn</span>
             <span class="sc-handle">kaushik-nath-bhaumik</span>
           </a>
 
-          <a href="https://x.com/kaushik_nb" target="_blank" rel="noopener" class="social-card">
-            <div class="sc-icon" style="background: #000;"><i class="fab fa-x-twitter"></i></div>
+          <!-- X / Twitter -->
+          <a href="https://x.com/kaushik_nb"
+             target="_blank" rel="noopener" class="social-card">
+            <div class="sc-icon" style="background:#000;">
+              <i class="fab fa-x-twitter"></i>
+            </div>
             <span class="sc-name">X / Twitter</span>
             <span class="sc-handle">@kaushik_nb</span>
           </a>
 
-          <a href="https://github.com/kaushik-nb" target="_blank" rel="noopener" class="social-card">
-            <div class="sc-icon" style="background: #24292F;"><i class="fab fa-github"></i></div>
+          <!-- GitHub -->
+          <a href="https://github.com/kaushik-nb"
+             target="_blank" rel="noopener" class="social-card">
+            <div class="sc-icon" style="background:#24292F;">
+              <i class="fab fa-github"></i>
+            </div>
             <span class="sc-name">GitHub</span>
             <span class="sc-handle">kaushik-nb</span>
           </a>
 
+          <!-- Email (repeated as a social card for completeness) -->
           <a href="mailto:kaushiknb9@gmail.com" class="social-card">
-            <div class="sc-icon" style="background: var(--primary);"><i class="fas fa-envelope"></i></div>
+            <div class="sc-icon" style="background:var(--primary);">
+              <i class="fas fa-envelope"></i>
+            </div>
             <span class="sc-name">Email</span>
             <span class="sc-handle">kaushiknb9@gmail.com</span>
+            <!-- ↑ Change email address in BOTH href above and here -->
           </a>
 
         </div>
+        <!-- end social grid -->
 
       </aside>
+      <!-- end left column -->
 
-      <!-- ── Right column: Open to Work ── -->
+
+      <!-- ─────────────────────────────────────────────────────────
+           RIGHT COLUMN: OPEN TO WORK — AVAILABILITY DETAILS
+           ─────────────────────────────────────────────────────────
+           A list of rows showing job search preferences.
+           Each row has a label on the left and pill tags on the right.
+
+           STRUCTURE OF ONE ROW:
+           ┌────────────────────────────────────────────────────────┐
+           │ <div class="otw-block">      ← one row                 │
+           │   <div class="otw-label">   ← left: row title         │
+           │   <div class="otw-chips">   ← right: pill tags        │
+           │     <span class="otw-chip"> ← one pill tag            │
+           │ </div>                       ← end row                 │
+           └────────────────────────────────────────────────────────┘
+
+           TO ADD A TAG: copy a <span class="otw-chip">...</span>
+             line and paste it inside the same otw-chips div.
+           TO REMOVE A TAG: delete that <span> line.
+           TO CHANGE A TAG: edit the text between the span tags.
+           TO HIGHLIGHT A TAG (teal pill): add otw-chip-highlight
+             to the class, like: class="otw-chip otw-chip-highlight"
+           ───────────────────────────────────────────────────────── -->
       <div>
         <div class="eyebrow">Availability</div>
-        <h2 style="margin-top: 8px; margin-bottom: 24px;">Open to work</h2>
+        <h2 style="margin-top:8px; margin-bottom:24px;">Open to work</h2>
 
-        <!-- Job titles -->
+
+        <!-- Row 1: Roles I am interested in -->
+        <!-- Add or remove <span class="otw-chip"> tags to update the list -->
         <div class="otw-block">
-          <div class="otw-label"><i class="fas fa-briefcase"></i> Job titles</div>
+          <div class="otw-label">
+            <i class="fas fa-briefcase"></i> Looking for Roles in
+          </div>
           <div class="otw-chips">
             <span class="otw-chip">Pharmaceutical Scientist</span>
-            <span class="otw-chip">Regulatory Affairs Associate</span>
-            <span class="otw-chip">Medical Writer</span>
+            <span class="otw-chip">Peptide Chemist</span>
+            <span class="otw-chip">Proteomics Specialist</span>
             <span class="otw-chip">Clinical Research Associate</span>
-            <span class="otw-chip">Medical Affairs</span>
+            <span class="otw-chip">Regulatory Affairs Associate</span>
+            <!-- ↑ Add, remove or rename job titles here -->
           </div>
         </div>
 
-        <!-- Location types -->
+        <!-- Row 2: On-site / Hybrid / Remote preference -->
         <div class="otw-block">
-          <div class="otw-label"><i class="fas fa-building"></i> Location types</div>
+          <div class="otw-label">
+            <i class="fas fa-building"></i> Location types
+          </div>
           <div class="otw-chips">
             <span class="otw-chip">On-site</span>
             <span class="otw-chip">Hybrid</span>
             <span class="otw-chip">Remote</span>
+            <!-- ↑ Remove any that are not acceptable -->
           </div>
         </div>
 
-        <!-- Locations on-site -->
+        <!-- Row 3: Cities / areas I can work on-site -->
         <div class="otw-block">
-          <div class="otw-label"><i class="fas fa-location-dot"></i> Locations (on-site)</div>
+          <div class="otw-label">
+            <i class="fas fa-location-dot"></i> Locations (on-site)
+          </div>
           <div class="otw-chips">
             <span class="otw-chip">Norwich</span>
+            <!-- ↑ Add more cities as needed, e.g. London, Cambridge -->
           </div>
         </div>
 
-        <!-- Locations remote -->
+        <!-- Row 4: Country scope for remote work -->
         <div class="otw-block">
-          <div class="otw-label"><i class="fas fa-wifi"></i> Locations (remote)</div>
+          <div class="otw-label">
+            <i class="fas fa-wifi"></i> Locations (remote)
+          </div>
           <div class="otw-chips">
             <span class="otw-chip">United Kingdom</span>
+            <!-- ↑ Add other countries if open to remote internationally -->
           </div>
         </div>
 
-        <!-- Start date -->
+        <!-- Row 5: How soon I can start -->
+        <!-- The highlighted (teal) chip draws attention to urgency -->
         <div class="otw-block">
-          <div class="otw-label"><i class="fas fa-calendar-check"></i> Start date</div>
+          <div class="otw-label">
+            <i class="fas fa-calendar-check"></i> Start date
+          </div>
           <div class="otw-chips">
-            <span class="otw-chip otw-chip-highlight">Immediately &mdash; actively applying</span>
+            <span class="otw-chip otw-chip-highlight">
+              Immediately - actively applying
+              <!-- ↑ Change this when a start date is confirmed -->
+            </span>
           </div>
         </div>
 
-        <!-- Employment type -->
+        <!-- Row 6: Full-time / part-time / contract preference -->
         <div class="otw-block">
-          <div class="otw-label"><i class="fas fa-clock"></i> Employment type</div>
+          <div class="otw-label">
+            <i class="fas fa-clock"></i> Employment type
+          </div>
           <div class="otw-chips">
             <span class="otw-chip">Full-time</span>
+            <!-- ↑ Add "Part-time" or "Contract" if also open to those -->
           </div>
         </div>
 
-        <div style="margin-top: 32px; padding-top: 28px; border-top: 1px solid var(--line);">
-          <a href="docs/Kaushik_Nath_Bhaumik_Resume_2026-05-05.pdf" target="_blank" rel="noopener" class="btn btn-primary">
+
+        <!-- ···················································
+             BUTTONS BELOW THE AVAILABILITY TABLE
+             ···················································
+             Two buttons: one opens the CV, one opens email.
+             Update the CV filename in href if it changes.
+             ··················································· -->
+        <div style="margin-top:32px; padding-top:28px; border-top:1px solid var(--line); display:flex; gap:12px; flex-wrap:wrap;">
+
+          <!-- CV button -->
+          <a href="../files/Kaushik_Nath_Bhaumik_Resume_20260505.pdf"
+             target="_blank" rel="noopener" class="btn btn-primary">
             <i class="fas fa-file-pdf"></i> Download full CV
+            <!-- ↑ Update filename in href if CV is renamed -->
           </a>
-          <a href="mailto:kaushiknb9@gmail.com" class="btn btn-ghost" style="margin-left: 10px;">
+
+          <!-- Email button -->
+          <a href="mailto:kaushiknb9@gmail.com" class="btn btn-ghost">
             <i class="fas fa-envelope"></i> kaushiknb9@gmail.com
+            <!-- ↑ Update email address in BOTH href and the visible text -->
           </a>
+
         </div>
 
       </div>
+      <!-- end right column -->
 
-    </div>
-  </div>
+
+    </div><!-- end main two-column grid -->
+  </div><!-- end container -->
 </section>
 
 
-<!-- ═══ FOOTER ═══ -->
+<!-- ═══════════════════════════════════════════════════════════════
+     FOOTER
+     ═══════════════════════════════════════════════════════════════
+     Same dark teal footer used on every page.
+     If a link or email changes, update it here AND on every
+     other page, or use Ctrl+F across all files to find each one.
+     ─────────────────────────────────────────────────────────────── -->
 <footer class="footer">
   <div class="container">
     <div class="footer-grid">
+
+      <!-- Column 1: name, tagline, social icons -->
       <div>
         <h4>Kaushik Nath Bhaumik, Ph.D.</h4>
-        <p style="color:#9DB6BB; max-width:46ch;">Pharmaceutical scientist working on peptide chemistry, drug delivery and analytical methods. Based in Norwich, United Kingdom.</p>
+        <p style="color:#9DB6BB; max-width:46ch;">
+          Pharmaceutical scientist working on peptide chemistry, drug delivery
+          and analytical methods. Based in Norwich, United Kingdom.
+          <!-- ↑ Change this short description as needed -->
+        </p>
         <div class="social-row" style="margin-top:14px;">
           <a href="mailto:kaushiknb9@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
           <a href="https://scholar.google.com/citations?user=DrMMYFoAAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
@@ -401,33 +587,49 @@ a:hover { color: var(--secondary); }
           <a href="https://www.linkedin.com/in/kaushik-nath-bhaumik-2a4a73bb/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
           <a href="https://x.com/kaushik_nb" target="_blank" rel="noopener" aria-label="X / Twitter"><i class="fab fa-x-twitter"></i></a>
           <a href="https://github.com/kaushik-nb" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
-          <a href="docs/Kaushik_Nath_Bhaumik_Resume_2026-05-05.pdf" target="_blank" rel="noopener" aria-label="Download CV"><i class="fas fa-file-pdf"></i></a>
         </div>
       </div>
+
+      <!-- Column 2: page links -->
       <div>
         <h4>Site</h4>
         <ul style="list-style:none; padding:0; margin:0; display:grid; gap:6px;">
-          <li><a href="about.html">About</a></li>
+          <li><a href="index.html">About</a></li>
           <li><a href="research.html">Research</a></li>
-          <li><a href="outreach.html">Outreach &amp; Teaching</a></li>
+          <li><a href="outreach.html">Outreach</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
+
+      <!-- Column 3: contact details -->
       <div>
         <h4>Contact</h4>
         <ul style="list-style:none; padding:0; margin:0; display:grid; gap:6px;">
-          <li><i class="fas fa-envelope" style="margin-right:8px; color:var(--secondary-300);"></i> kaushiknb9@gmail.com</li>
-          <li><i class="fas fa-location-dot" style="margin-right:8px; color:var(--secondary-300);"></i> Norwich, UK</li>
+          <li>
+            <i class="fas fa-envelope" style="margin-right:8px; color:var(--secondary-300);"></i>
+            kaushiknb9@gmail.com  <!-- ← email address -->
+          </li>
+          <li>
+            <i class="fas fa-location-dot" style="margin-right:8px; color:var(--secondary-300);"></i>
+            Norwich, UK  <!-- ← city / country -->
+          </li>
         </ul>
       </div>
+
     </div>
+
+    <!-- Copyright line at the very bottom -->
     <div class="footer-bottom">
-      <div>© 2026 Kaushik Nath Bhaumik · All rights reserved</div>
-      <div>Built with HTML &amp; CSS · Hosted on GitHub Pages</div>
+      <div>&copy; 2026 Kaushik Nath Bhaumik . All rights reserved</div>
+      <!-- ↑ Update the year when needed -->
+      <div>Built with HTML and CSS . Hosted on GitHub Pages</div>
     </div>
+
   </div>
 </footer>
 
+
+<!-- Mobile menu — do not edit -->
 <script>
   document.getElementById('menuBtn').addEventListener('click', () => {
     document.getElementById('nav').classList.toggle('open');
