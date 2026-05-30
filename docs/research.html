@@ -3,14 +3,53 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!--
+  ╔══════════════════════════════════════════════════════════════════╗
+  ║         KAUSHIK NATH BHAUMIK — RESEARCH PAGE                    ║
+  ║                                                                  ║
+  ║  This file lives in docs/ alongside index.html, contact.html    ║
+  ║  and the other pages.                                            ║
+  ║                                                                  ║
+  ║  THIS PAGE CONTAINS FOUR SECTIONS:                               ║
+  ║    1. Research interests  (three topic tiles)                    ║
+  ║    2. Projects            (detailed project entries)             ║
+  ║    3. Software stack      (data analysis tools)                  ║
+  ║    4. Publications        (papers grouped by year)               ║
+  ║    5. Conferences         (presentations)                        ║
+  ║    6. Awards              (grants & scholarships)                ║
+  ║                                                                  ║
+  ║  HOW TO EDIT                                                     ║
+  ║  ─────────────────────────────────────────────────────────────   ║
+  ║  Change text between > and <  only.                              ║
+  ║  Do not touch anything inside < > angle brackets.               ║
+  ║  Use Ctrl+F (Cmd+F on Mac) to search for any word to find it.   ║
+  ╚══════════════════════════════════════════════════════════════════╝
+-->
+
+<!-- Browser tab title -->
 <title>Research — Kaushik Nath Bhaumik, Ph.D.</title>
+
+<!-- Google search snippet (not visible on the page) -->
 <meta name="description" content="Research, publications, conference presentations and awards of Kaushik Nath Bhaumik, Ph.D." />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+<!-- Icons and fonts — do not edit these lines -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<!-- ───────────────────────────────────────────────────────────────
+     STYLES — controls all colours, fonts and spacing.
+     No need to edit unless changing the colour scheme.
+
+     COLOUR GUIDE:
+       --primary   #0F4C5C  →  deep teal (headings, buttons, borders)
+       --secondary #C18C2C  →  amber/gold (accents, labels, amber cards)
+       --accent    #B33A3A  →  brick red (used on the QC project card)
+       --bg        #FBF8F1  →  cream page background
+     ─────────────────────────────────────────────────────────────── -->
 <style>
-/* ── Variables ── */
 :root {
   --primary:       #0F4C5C;
   --primary-700:   #0A3845;
@@ -53,8 +92,6 @@ a:hover { color: var(--secondary); }
 small { color: var(--ink-3); }
 .container { max-width: 1200px; margin: 0 auto; padding: 0 28px; }
 .mono { font-family: var(--font-mono); }
-
-/* ── Topbar ── */
 .topbar { position: sticky; top: 0; z-index: 50; background: rgba(251,248,241,0.93); backdrop-filter: saturate(140%) blur(8px); border-bottom: 1px solid var(--line); }
 .topbar-inner { display: flex; align-items: center; justify-content: space-between; padding: 14px 28px; max-width: 1200px; margin: 0 auto; }
 .brand { display: flex; align-items: center; gap: 12px; font-family: var(--font-display); font-weight: 700; font-size: 1.05rem; color: var(--primary); text-decoration: none; }
@@ -71,8 +108,6 @@ small { color: var(--ink-3); }
   .nav.open { display: flex; flex-direction: column; align-items: stretch; position: absolute; top: 64px; left: 16px; right: 16px; background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 8px; gap: 2px; box-shadow: var(--shadow-md); }
   .menu-btn { display: inline-flex; }
 }
-
-/* ── Buttons ── */
 .btn { display: inline-flex; align-items: center; gap: 8px; padding: 11px 18px; border-radius: var(--radius); font-weight: 600; font-size: 0.94rem; border: 1px solid transparent; cursor: pointer; transition: transform .2s, background .2s, color .2s; text-decoration: none; }
 .btn-primary { background: var(--primary); color: #fff; }
 .btn-primary:hover { background: var(--primary-700); color: #fff; transform: translateY(-2px); }
@@ -80,19 +115,13 @@ small { color: var(--ink-3); }
 .btn-outline:hover { background: var(--primary); color: #fff; transform: translateY(-2px); }
 .btn-ghost { background: transparent; color: var(--ink); border-color: var(--line); }
 .btn-ghost:hover { background: var(--bg-alt); }
-
-/* ── Eyebrow / chip ── */
 .eyebrow { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--secondary); }
 .eyebrow::before { content: ''; width: 24px; height: 1px; background: var(--secondary); }
 .chip { display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border-radius: 999px; background: var(--bg-alt); border: 1px solid var(--line-2); color: var(--ink-2); font-size: 0.78rem; font-weight: 500; }
-
-/* ── Section ── */
 .section { padding: 72px 0; }
 .section.alt { background: var(--bg-alt); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .section-head { display: flex; align-items: flex-end; justify-content: space-between; flex-wrap: wrap; gap: 16px; margin-bottom: 36px; }
 .section-head h2 { margin: 6px 0 0; }
-
-/* ── Page hero ── */
 .page-hero {
   background: var(--bg-dark);
   background-image: radial-gradient(circle at 10% 90%, rgba(193,140,44,0.18) 0, transparent 50%), radial-gradient(circle at 90% 10%, rgba(255,255,255,0.06) 0, transparent 50%), radial-gradient(rgba(255,255,255,0.04) 1px, transparent 1px);
@@ -103,22 +132,18 @@ small { color: var(--ink-3); }
 .page-hero .eyebrow::before { background: var(--secondary-300); }
 .page-hero h1 { color: #fff; margin-top: 10px; }
 .page-hero p { color: #B8CED2; max-width: 68ch; margin-top: 10px; font-size: 1.08rem; }
-
-/* ── Cards ── */
 .card { background: var(--bg-card); border: 1px solid var(--line); border-radius: var(--radius-lg); padding: 24px; box-shadow: var(--shadow-sm); transition: transform .25s, box-shadow .25s; }
 .card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
-
-/* ── Research tiles ── */
+/* Research interest tiles */
 .tile { background: var(--bg-card); border: 1px solid var(--line); border-radius: var(--radius-lg); padding: 28px; box-shadow: var(--shadow-sm); transition: transform .25s, box-shadow .25s; }
 .tile:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
 .icon-circle { width: 52px; height: 52px; border-radius: 50%; display: grid; place-items: center; color: #fff; font-size: 1.3rem; margin-bottom: 16px; }
-
-/* ── Project list ── */
+/* Project cards */
 .proj-list { display: flex; flex-direction: column; gap: 0; }
 .proj { border-left: 4px solid var(--primary); background: var(--bg-card); border-radius: 0 var(--radius-lg) var(--radius-lg) 0; padding: 24px 28px; margin-bottom: 16px; box-shadow: var(--shadow-sm); display: grid; grid-template-columns: 220px 1fr; gap: 28px; transition: box-shadow .2s; }
 .proj:hover { box-shadow: var(--shadow-md); }
-.proj.amber { border-left-color: var(--secondary); }
-.proj.red { border-left-color: var(--accent); }
+.proj.amber { border-left-color: var(--secondary); }  /* amber left border */
+.proj.red   { border-left-color: var(--accent); }     /* red left border */
 .proj-meta { display: flex; flex-direction: column; gap: 4px; padding-top: 3px; }
 .proj-meta .yrs { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.10em; text-transform: uppercase; color: var(--ink-3); }
 .proj-meta .org { font-weight: 700; color: var(--ink); font-size: 0.94rem; }
@@ -127,49 +152,29 @@ small { color: var(--ink-3); }
 .proj-body p { font-size: 0.93rem; color: var(--ink-2); margin-bottom: 10px; }
 .proj-body ul { margin: 0; padding-left: 18px; color: var(--ink-2); font-size: 0.9rem; line-height: 1.7; }
 @media (max-width: 720px) { .proj { grid-template-columns: 1fr; gap: 10px; } }
-
-/* ── Software strip ── */
+/* Software cards */
 .skills-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 8px; }
 .sw { background: var(--bg-card); border: 1px solid var(--line); border-radius: var(--radius-lg); padding: 20px; box-shadow: var(--shadow-sm); transition: transform .2s, box-shadow .2s; }
 .sw:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
 .sw-label { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--secondary); margin-bottom: 4px; }
-.sw-name { font-family: var(--font-display); font-size: 1.08rem; font-weight: 700; color: var(--ink); margin-bottom: 6px; }
-.sw-desc { font-size: 0.82rem; color: var(--ink-2); line-height: 1.55; }
+.sw-name  { font-family: var(--font-display); font-size: 1.08rem; font-weight: 700; color: var(--ink); margin-bottom: 6px; }
+.sw-desc  { font-size: 0.82rem; color: var(--ink-2); line-height: 1.55; }
 @media (max-width: 900px) { .skills-strip { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 520px) { .skills-strip { grid-template-columns: 1fr; } }
-
-/* ── Publications ── */
+@media (max-width: 520px)  { .skills-strip { grid-template-columns: 1fr; } }
+/* Publication cards */
 .pub-year-group { margin-bottom: 36px; }
 .pub-year-group:last-child { margin-bottom: 0; }
-.pub-year-label {
-  display: inline-flex; align-items: center; gap: 12px;
-  font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
-  color: #fff; background: var(--primary);
-  padding: 5px 14px; border-radius: 999px; margin-bottom: 16px;
-}
-.pub {
-  background: var(--bg-card); border: 1px solid var(--line);
-  border-left: 4px solid var(--primary); border-radius: var(--radius-lg);
-  padding: 22px 24px; margin-bottom: 14px;
-  transition: transform .2s, box-shadow .2s;
-}
+.pub-year-label { display: inline-flex; align-items: center; gap: 12px; font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: #fff; background: var(--primary); padding: 5px 14px; border-radius: 999px; margin-bottom: 16px; }
+.pub { background: var(--bg-card); border: 1px solid var(--line); border-left: 4px solid var(--primary); border-radius: var(--radius-lg); padding: 22px 24px; margin-bottom: 14px; transition: transform .2s, box-shadow .2s; }
 .pub:last-child { margin-bottom: 0; }
 .pub:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
 .pub h3 { font-size: 1.05rem; line-height: 1.4; margin-bottom: 8px; }
 .pub .authors { font-size: 0.9rem; color: var(--ink-2); margin-bottom: 6px; }
-.pub .authors b { color: var(--primary); font-weight: 700; }
+.pub .authors b { color: var(--primary); font-weight: 700; }  /* bold = my name */
 .pub .venue { font-style: italic; color: var(--ink-3); font-size: 0.88rem; }
-.pub .pub-cover { float: right; margin: 0 0 10px 18px; width: 90px; border-radius: var(--radius-sm); overflow: hidden; border: 1px solid var(--line); }
-.pub .pub-cover img { width: 100%; display: block; }
 .pub .pub-links { margin-top: 12px; display: flex; gap: 8px; flex-wrap: wrap; }
-
-/* ── Conference cards ── */
-.conf-item {
-  background: var(--bg-card); border: 1px solid var(--line);
-  border-left: 4px solid var(--secondary); border-radius: var(--radius-lg);
-  padding: 20px 24px; margin-bottom: 14px;
-  transition: transform .2s, box-shadow .2s;
-}
+/* Conference cards */
+.conf-item { background: var(--bg-card); border: 1px solid var(--line); border-left: 4px solid var(--secondary); border-radius: var(--radius-lg); padding: 20px 24px; margin-bottom: 14px; transition: transform .2s, box-shadow .2s; }
 .conf-item:last-child { margin-bottom: 0; }
 .conf-item:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
 .conf-badge { display: inline-block; font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #fff; background: var(--secondary); padding: 3px 10px; border-radius: 999px; margin-bottom: 8px; }
@@ -177,34 +182,25 @@ small { color: var(--ink-3); }
 .conf-item .conf-authors { font-size: 0.88rem; color: var(--ink-2); margin-bottom: 4px; }
 .conf-item .conf-authors b { color: var(--primary); font-weight: 700; }
 .conf-item .conf-venue { font-style: italic; font-size: 0.86rem; color: var(--ink-3); }
-
-/* ── Award cards ── */
-.award-card {
-  background: var(--bg-card); border: 1px solid var(--line); border-radius: var(--radius-lg);
-  padding: 24px 28px; box-shadow: var(--shadow-sm); display: flex; gap: 20px; align-items: flex-start;
-  transition: transform .25s, box-shadow .25s;
-}
+/* Award cards */
+.award-card { background: var(--bg-card); border: 1px solid var(--line); border-radius: var(--radius-lg); padding: 24px 28px; box-shadow: var(--shadow-sm); display: flex; gap: 20px; align-items: flex-start; transition: transform .25s, box-shadow .25s; }
 .award-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
 .award-medal { width: 48px; height: 48px; flex-shrink: 0; border-radius: 50%; display: grid; place-items: center; font-size: 1.3rem; }
-
-/* ── Stats ── */
+/* Stats */
 .stat { background: var(--bg-card); border: 1px solid var(--line); border-radius: var(--radius-lg); padding: 24px; text-align: center; box-shadow: var(--shadow-sm); }
-.stat .icon { font-size: 1.4rem; color: var(--primary); margin-bottom: 8px; }
+.stat .icon  { font-size: 1.4rem; color: var(--primary); margin-bottom: 8px; }
 .stat .label { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 4px; }
 .stat .value { font-family: var(--font-display); font-size: 2.6rem; font-weight: 700; color: var(--ink); line-height: 1; }
-
-/* ── Grid ── */
+/* Grid */
 .grid { display: grid; gap: 24px; }
 .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .grid-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 @media (max-width: 900px) { .grid-3, .grid-4 { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 600px) { .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; } }
-
 .tag-list { display: flex; flex-wrap: wrap; gap: 8px; }
 .divider { border: none; border-top: 1px solid var(--line); margin: 56px 0; }
-
-/* ── Footer ── */
+/* Footer */
 .footer { background: var(--bg-dark); color: #DCEAEC; padding: 48px 0 28px; }
 .footer h4 { color: #fff; font-family: var(--font-display); margin-bottom: 12px; }
 .footer a { color: #DCEAEC; }
@@ -212,88 +208,224 @@ small { color: var(--ink-3); }
 .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; }
 .footer-bottom { margin-top: 36px; padding-top: 18px; border-top: 1px solid rgba(255,255,255,0.12); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-family: var(--font-mono); font-size: 12px; color: #9DB6BB; }
 .social-row { display: flex; gap: 10px; flex-wrap: wrap; }
-.social-row a { width: 38px; height: 38px; border-radius: 8px; display: grid; place-items: center; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); color: #DCEAEC; }
+.social-row a { width: 38px; height: 38px; border-radius: 8px; display: grid; place-items: center; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); color: #DCEAEC; transition: background .2s, color .2s, border-color .2s; }
 .social-row a:hover { background: var(--secondary); color: #fff; border-color: var(--secondary); }
 @media (max-width: 720px) { .footer-grid { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
 
-<!-- ═══ TOPBAR ═══ -->
+
+<!-- ═══════════════════════════════════════════════════════════════
+     NAVIGATION BAR
+     ═══════════════════════════════════════════════════════════════
+     "Research" has class="active" — this gives it the amber
+     underline to show it is the current page.
+     ─────────────────────────────────────────────────────────────── -->
 <header class="topbar">
   <div class="topbar-inner">
     <a href="index.html" class="brand">
       <span class="brand-mark">KB</span>
-      <span>Kaushik Nath Bhaumik<small>Ph.D. · Pharmaceutical Sciences</small></span>
+      <span>
+        Kaushik Nath Bhaumik  <!-- ← full name -->
+        <small>Ph.D. · Pharmaceutical Sciences</small>
+      </span>
     </a>
     <button class="menu-btn" id="menuBtn" aria-label="Open menu"><i class="fas fa-bars"></i></button>
     <nav class="nav" id="nav">
-      <a href="about.html">About</a>
-      <a href="research.html" class="active">Research</a>
-      <a href="outreach.html">Outreach &amp; Teaching</a>
+      <a href="index.html">About</a>
+      <a href="research.html" class="active">Research</a>  <!-- ← active = this page -->
+      <a href="outreach.html">Outreach</a>
       <a href="contact.html">Contact</a>
     </nav>
   </div>
 </header>
 
-<!-- ═══ PAGE HERO ═══ -->
+
+<!-- ═══════════════════════════════════════════════════════════════
+     PAGE HERO  (dark teal banner)
+     ═══════════════════════════════════════════════════════════════
+     The dark intro banner at the top of the page.
+     Contains a label, heading, one paragraph, and three
+     quick-jump buttons that scroll to sections below.
+
+     TO CHANGE:
+       Label      → find "Research · Publications · Conferences · Awards"
+       Heading    → find "Research." in the h1
+       Paragraph  → find and edit the <p> text
+       Buttons    → find the three .btn lines; the href="#..." values
+                    jump to the matching id="..." section below
+     ─────────────────────────────────────────────────────────────── -->
 <section class="page-hero">
   <div class="container">
+
     <div class="eyebrow">Research · Publications · Conferences · Awards</div>
+    <!-- ↑ Change the label above the heading if needed -->
+
     <h1>Research.</h1>
-    <p>A decade of work spanning peptide chemistry, drug delivery and analytical mass spectrometry &mdash; with a current focus on LC&ndash;MS/MS proteomics and metaproteomics workflows for complex biological samples.</p>
+    <!-- ↑ Change the main page heading here -->
+
+    <p>
+      My work spans peptide chemistry, drug delivery and analytical
+      mass spectrometry - with a current focus on LC-MS/MS proteomics
+      and proteomics workflows for complex biological samples.
+      <!-- ↑ Change this intro sentence to reflect current focus -->
+    </p>
+
+    <!-- Quick-jump buttons — the href="#publications" etc. scroll to those sections -->
     <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:22px;">
-      <a href="#publications" class="btn btn-primary"><i class="fas fa-book-open"></i> Publications</a>
-      <a href="#conferences" class="btn" style="background:rgba(255,255,255,0.1); color:#fff; border-color:rgba(255,255,255,0.25);"><i class="fas fa-person-chalkboard"></i> Conferences</a>
-      <a href="#awards" class="btn" style="background:rgba(255,255,255,0.1); color:#fff; border-color:rgba(255,255,255,0.25);"><i class="fas fa-trophy"></i> Awards</a>
+      <a href="#publications" class="btn btn-primary">
+        <i class="fas fa-book-open"></i> Publications
+      </a>
+      <a href="#conferences" class="btn" style="background:rgba(255,255,255,0.1); color:#fff; border-color:rgba(255,255,255,0.25);">
+        <i class="fas fa-person-chalkboard"></i> Conferences
+      </a>
+      <a href="#awards" class="btn" style="background:rgba(255,255,255,0.1); color:#fff; border-color:rgba(255,255,255,0.25);">
+        <i class="fas fa-trophy"></i> Awards
+      </a>
     </div>
+
   </div>
 </section>
 
-<!-- ═══ RESEARCH PILLARS ═══ -->
+
+<!-- ═══════════════════════════════════════════════════════════════
+     SECTION 1: RESEARCH INTERESTS  (three topic tiles)
+     ═══════════════════════════════════════════════════════════════
+     Three cards showing the main research themes.
+     Each tile has a coloured icon, a heading, a short paragraph,
+     and keyword chips.
+
+     STRUCTURE OF ONE TILE:
+     ┌────────────────────────────────────────────────────────────┐
+     │ <article class="tile">                                     │
+     │   <div class="icon-circle" style="background:...">        │
+     │     <i class="fas fa-..."></i>   ← the icon               │
+     │   </div>                                                   │
+     │   <h3>Topic heading</h3>                                   │
+     │   <p>Short description</p>                                 │
+     │   <div class="tag-list">                                   │
+     │     <span class="chip">Keyword</span>  ← pill tag          │
+     │   </div>                                                   │
+     │ </article>                                                  │
+     └────────────────────────────────────────────────────────────┘
+
+     TO CHANGE ICON COLOUR: edit background:var(--primary) etc.
+       Options: --primary (teal), --secondary (amber), --accent (red)
+     TO CHANGE ICON: edit class="fas fa-wave-square" etc.
+       Browse icons at fontawesome.com/icons
+     TO ADD/REMOVE A CHIP: copy or delete a <span class="chip"> line
+     ─────────────────────────────────────────────────────────────── -->
 <section class="section">
   <div class="container">
     <div class="section-head">
       <div>
-        <div class="eyebrow">Three pillars</div>
-        <h2>Research interests</h2>
+        <div class="eyebrow">Three pillars</div>   <!-- ← section label -->
+        <h2>Research interests</h2>                <!-- ← section heading -->
       </div>
-      <div class="mono" style="font-size:12px; color:var(--ink-3); text-transform:uppercase; letter-spacing:.08em;">2015 — present</div>
+      <div class="mono" style="font-size:12px; color:var(--ink-3); text-transform:uppercase; letter-spacing:.08em;">
+        2015 - present  <!-- ← date range shown top-right -->
+      </div>
     </div>
+
     <div class="grid grid-3">
 
+      <!-- ── TILE 1: Peptide Chemistry ──────────────────────────── -->
       <article class="tile">
-        <div class="icon-circle" style="background:var(--primary);"><i class="fas fa-wave-square"></i></div>
-        <h3>LC&ndash;MS Proteomics &amp; Metaproteomics</h3>
-        <p style="font-size:.93rem;">High-throughput, high-sensitivity LC&ndash;MS/MS workflows on Orbitrap and timsTOF/Bruker platforms. Method development for label-free DDA and DIA acquisition across tissue, plasma, microbiome and food samples.</p>
+        <div class="icon-circle" style="background:var(--secondary);">
+          <i class="fas fa-dna"></i>
+        </div>
+        <h3>Peptide Chemistry and Foldamers</h3>
+        <p style="font-size:.93rem;">
+          Rational design and synthesis of host-defence peptides, &alpha;/&beta;-peptides
+          and peptidomimetic foldamers. Probing how chemically diverse AMPs converge
+          on bacterial membrane hyperpolarization to potentiate antibiotics.
+        </p>
         <div class="tag-list" style="margin-top:14px;">
-          <span class="chip">Orbitrap</span><span class="chip">timsTOF</span><span class="chip">DIA / DDA</span>
+          <span class="chip">SPPS</span>
+          <span class="chip">CD / NMR</span>
+          <span class="chip">MIC / FACS</span>
         </div>
       </article>
 
+
+      <!-- ── TILE 2: Drug Delivery ───────────────────────────────── -->
       <article class="tile">
-        <div class="icon-circle" style="background:var(--secondary);"><i class="fas fa-dna"></i></div>
-        <h3>Peptide Chemistry &amp; Foldamers</h3>
-        <p style="font-size:.93rem;">Rational design and synthesis of host-defence peptides, α/β-peptides and peptidomimetic foldamers. Probing how chemically diverse AMPs converge on bacterial membrane hyperpolarization to potentiate antibiotics.</p>
+        <div class="icon-circle" style="background:var(--accent);">
+          <i class="fas fa-pills"></i>
+        </div>
+        <h3>Drug Delivery and Formulation</h3>
+        <p style="font-size:.93rem;">
+          Lipid nanoparticles (SLN, NLC), polymeric implants, hydrogel matrices
+          and 3D-printed capsules engineered for controlled release of peptide
+          therapeutics. Release-kinetics, encapsulation and PK studies.
+        </p>
         <div class="tag-list" style="margin-top:14px;">
-          <span class="chip">SPPS</span><span class="chip">CD / NMR</span><span class="chip">MIC / FACS</span>
+          <span class="chip">Lipid NPs</span>
+          <span class="chip">3D Printing</span>
+          <span class="chip">PK</span>
         </div>
       </article>
 
+
+      <!-- ── TILE 1: LC-MS Proteomics ───────────────────────────── -->
       <article class="tile">
-        <div class="icon-circle" style="background:var(--accent);"><i class="fas fa-pills"></i></div>
-        <h3>Drug Delivery &amp; Formulation</h3>
-        <p style="font-size:.93rem;">Lipid nanoparticles (SLN, NLC), polymeric implants, hydrogel matrices and 3D-printed capsules engineered for controlled release of peptide therapeutics. Release-kinetics, encapsulation and PK studies.</p>
+        <!-- Icon circle — change background colour and icon class as needed -->
+        <div class="icon-circle" style="background:var(--primary);">
+          <i class="fas fa-wave-square"></i>
+        </div>
+        <h3>LC-MS Proteomics and Metaproteomics</h3>
+        <p style="font-size:.93rem;">
+          High-throughput, high-sensitivity LC-MS/MS workflows on Orbitrap
+          and timsTOF/Bruker platforms. Method development for label-free DDA and
+          DIA acquisition across tissue, plasma, microbiome and food samples.
+        </p>
         <div class="tag-list" style="margin-top:14px;">
-          <span class="chip">Lipid NPs</span><span class="chip">3D Printing</span><span class="chip">PK</span>
+          <span class="chip">Orbitrap</span>
+          <span class="chip">timsTOF</span>
+          <span class="chip">DIA / DDA</span>
+          <!-- ↑ Add, remove or rename chip tags here -->
         </div>
       </article>
+
 
     </div>
   </div>
 </section>
 
-<!-- ═══ PROJECTS ═══ -->
+
+<!-- ═══════════════════════════════════════════════════════════════
+     SECTION 2: PROJECTS  (detailed entries per role)
+     ═══════════════════════════════════════════════════════════════
+     Each project card has a left coloured border:
+       teal  (default .proj)       →  research / academic role
+       amber (.proj.amber)         →  teaching / other role
+       red   (.proj.red)           →  industry role
+
+     STRUCTURE OF ONE PROJECT CARD:
+     ┌────────────────────────────────────────────────────────────┐
+     │ <article class="proj">        ← teal border (default)      │
+     │ <article class="proj amber">  ← amber border               │
+     │ <article class="proj red">    ← red border                 │
+     │                                                            │
+     │   LEFT COLUMN (.proj-meta):                                │
+     │     .yrs  →  date range                                    │
+     │     .org  →  institution / company                         │
+     │     .loc  →  location or project name                      │
+     │                                                            │
+     │   RIGHT COLUMN (.proj-body):                               │
+     │     <h3>  →  project / role title                          │
+     │     <p>   →  description paragraph                         │
+     │     <ul>  →  bullet point list of key outputs              │
+     │ </article>                                                  │
+     └────────────────────────────────────────────────────────────┘
+
+     TO ADD A PROJECT: copy one full <article ...>...</article>
+       block and paste it in the correct chronological position.
+     TO REMOVE A PROJECT: delete the whole <article> block.
+     TO CHANGE BORDER COLOUR: add/remove "amber" or "red" from
+       the class attribute on the opening <article> tag.
+     ─────────────────────────────────────────────────────────────── -->
 <section class="section alt">
   <div class="container">
     <div class="section-head">
@@ -301,21 +433,36 @@ small { color: var(--ink-3); }
         <div class="eyebrow">Track record</div>
         <h2>Projects I've worked on</h2>
       </div>
-      <div class="mono" style="font-size:12px; color:var(--ink-3); text-transform:uppercase; letter-spacing:.08em;">2015 — 2026</div>
+      <div class="mono" style="font-size:12px; color:var(--ink-3); text-transform:uppercase; letter-spacing:.08em;">
+        2015 - 2026
+      </div>
     </div>
+
     <div class="proj-list">
 
+
+      <!-- ── PROJECT 1: University of Brighton (teal border) ────── -->
       <article class="proj">
         <div class="proj-meta">
-          <span class="yrs">Nov 2025 – Apr 2026</span>
-          <span class="org">University of Brighton</span>
-          <span class="loc">INJECTHEAL · Horizon Europe</span>
+          <span class="yrs">Nov 2025 – Apr 2026</span>          <!-- ← dates -->
+          <span class="org">University of Brighton</span>        <!-- ← institution -->
+          <span class="loc">INJECTHEAL · Horizon Europe</span>  <!-- ← project / location -->
         </div>
         <div class="proj-body">
           <h3>Postdoctoral Researcher — Self-administered injectable therapeutics</h3>
-          <p>Worked within the EU Horizon-funded INJECTHEAL consortium on self-administered injectable formulations of biologics. Designed peptide-based nanocarriers for targeted delivery of therapeutics in wound healing. Analytical focus on peptide identity, integrity and stability, supporting consortium partners on formulation–stability decisions.</p>
+          <!-- ↑ Role title -->
+          <p>
+            Worked within the EU Horizon-funded INJECTHEAL consortium on
+            self-administered injectable formulations of biologics. Designed
+            peptide-based nanocarriers for targeted delivery of therapeutics
+            in wound healing. Analytical focus on peptide identity, integrity
+            and stability, supporting consortium partners on formulation–stability
+            decisions.
+            <!-- ↑ Description paragraph — change as needed -->
+          </p>
+          <!-- Bullet list of key outputs — add or remove <li> lines -->
           <ul>
-            <li>Developed and validated LC&ndash;MS/MS methods for peptide actives in complex formulation matrices</li>
+            <li>Developed and validated LC-MS/MS methods for peptide actives in complex formulation matrices</li>
             <li>Stability and forced-degradation studies; degradation product identification</li>
             <li>Performed SPPS and physicochemical characterisation including in vitro biocompatibility testing</li>
             <li>Cross-partner data sharing and reporting under Horizon Europe deliverables</li>
@@ -323,6 +470,8 @@ small { color: var(--ink-3); }
         </div>
       </article>
 
+
+      <!-- ── PROJECT 2: University of East Anglia (amber border) ── -->
       <article class="proj amber">
         <div class="proj-meta">
           <span class="yrs">Feb – Jul 2025</span>
@@ -331,7 +480,12 @@ small { color: var(--ink-3); }
         </div>
         <div class="proj-body">
           <h3>Oral delivery of weight-loss peptide drugs</h3>
-          <p>Designed and fabricated 3D-printed polymeric capsules to enhance the oral bioavailability of weight-loss peptide therapeutics. Combined polymer engineering with peptide formulation science and rigorous in vitro release-kinetics characterisation.</p>
+          <p>
+            Designed and fabricated 3D-printed polymeric capsules to enhance
+            the oral bioavailability of weight-loss peptide therapeutics.
+            Combined polymer engineering with peptide formulation science and
+            rigorous in vitro release-kinetics characterisation.
+          </p>
           <ul>
             <li>Polymer selection, capsule geometry optimisation and 3D-print parameter sweeps</li>
             <li>Controlled-release profiles and stability under simulated GI conditions</li>
@@ -340,6 +494,8 @@ small { color: var(--ink-3); }
         </div>
       </article>
 
+
+      <!-- ── PROJECT 3: University of Szeged (teal border) ─────── -->
       <article class="proj">
         <div class="proj-meta">
           <span class="yrs">2018 – 2024</span>
@@ -347,17 +503,25 @@ small { color: var(--ink-3); }
           <span class="loc">Martinek Lab · Doctoral</span>
         </div>
         <div class="proj-body">
-          <h3>Bacterial membrane electrophysiology &amp; antimicrobial peptides</h3>
-          <p>Investigated how chemically diverse antimicrobial peptides converge on hyperpolarization of the bacterial membrane — the basis of my first-author <em>Communications Biology</em> paper. Synthesised AMPs and peptidomimetic foldamers via manual and automated SPPS, purified by HPLC&ndash;MS, characterised by CD, NMR and fluorescence.</p>
+          <h3>Bacterial membrane electrophysiology and antimicrobial peptides</h3>
+          <p>
+            Investigated how chemically diverse antimicrobial peptides converge
+            on hyperpolarization of the bacterial membrane — the basis of my
+            first-author <em>Communications Biology</em> paper. Synthesised AMPs
+            and peptidomimetic foldamers via manual and automated SPPS, purified
+            by HPLC-MS, characterised by CD, NMR and fluorescence.
+          </p>
           <ul>
-            <li>Manual and automated SPPS; HPLC&ndash;MS purification and characterisation</li>
+            <li>Manual and automated SPPS; HPLC-MS purification and characterisation</li>
             <li>CD, NMR, UV-Vis, fluorescence spectroscopy and ITC binding studies</li>
             <li>Protein expression in <em>E. coli</em>; in vitro / in vivo assays (MIC, FACS)</li>
-            <li>Statistical analysis &amp; figure preparation in R/RStudio</li>
+            <li>Statistical analysis and figure preparation in R/RStudio</li>
           </ul>
         </div>
       </article>
 
+
+      <!-- ── PROJECT 4: Sun Pharmaceutical (red border) ─────────── -->
       <article class="proj red">
         <div class="proj-meta">
           <span class="yrs">Oct 2017 – Feb 2018</span>
@@ -366,7 +530,12 @@ small { color: var(--ink-3); }
         </div>
         <div class="proj-body">
           <h3>Pharmaceutical Quality Control — Analytical chemistry under GMP</h3>
-          <p>HPLC analysis of pharmaceutical samples (finished APIs, intermediates, raw materials, recovered solvents, in-process material, working standards) in a fully GMP-compliant environment. Built audit-ready workflows with strict cGxP adherence and data integrity.</p>
+          <p>
+            HPLC analysis of pharmaceutical samples (finished APIs, intermediates,
+            raw materials, recovered solvents, in-process material, working
+            standards) in a fully GMP-compliant environment. Built audit-ready
+            workflows with strict cGxP adherence and data integrity.
+          </p>
           <ul>
             <li>HPLC method execution and quantitative analysis on commercial products</li>
             <li>Instrument maintenance, troubleshooting and calibration schedules</li>
@@ -375,6 +544,8 @@ small { color: var(--ink-3); }
         </div>
       </article>
 
+
+      <!-- ── PROJECT 5: THSTI (teal border) ────────────────────── -->
       <article class="proj">
         <div class="proj-meta">
           <span class="yrs">Dec 2015 – Oct 2017</span>
@@ -382,220 +553,438 @@ small { color: var(--ink-3); }
           <span class="loc">Faridabad · JRF</span>
         </div>
         <div class="proj-body">
-          <h3>Lipid &amp; polymeric drug-delivery systems for tuberculosis</h3>
-          <p>Formulated and characterised lipid nanoparticles, biodegradable polymeric &amp; hydrogel implants and lipid-drug conjugates for sustained release of anti-TB therapeutics. Developed and validated HPLC methods for encapsulation efficiency and PK readouts in vitro and in vivo.</p>
+          <h3>Lipid and polymeric drug-delivery systems for tuberculosis</h3>
+          <p>
+            Formulated and characterised lipid nanoparticles, biodegradable
+            polymeric and hydrogel implants and lipid-drug conjugates for
+            sustained release of anti-TB therapeutics. Developed and validated
+            HPLC methods for encapsulation efficiency and PK readouts in vitro
+            and in vivo.
+          </p>
           <ul>
             <li>SLN / NLC formulation, hydrogel implants, lipid-drug conjugates</li>
-            <li>HPLC method development &amp; validation; encapsulation and PK studies</li>
+            <li>HPLC method development and validation; encapsulation and PK studies</li>
             <li>Confocal/fluorescence biodistribution, cytokine assays; NMR, DLS, DSC-TGA</li>
           </ul>
         </div>
       </article>
 
-    </div>
+
+    </div><!-- end proj-list -->
   </div>
 </section>
 
-<!-- ═══ SOFTWARE STACK ═══ -->
-<section class="section">
-  <div class="container">
-    <div class="section-head">
-      <div>
-        <div class="eyebrow">Data analysis</div>
-        <h2>Proteomics &amp; metaproteomics software stack</h2>
-      </div>
-      <div class="mono" style="font-size:12px; color:var(--ink-3); text-transform:uppercase; letter-spacing:.08em;">DDA · DIA · PASEF · diaPASEF</div>
-    </div>
-    <p style="max-width:80ch; color:var(--ink-2); margin-bottom:32px;">Proficient across the full analytical pipeline from raw files to statistical interpretation — Thermo Orbitrap (Exploris, Astral), Bruker timsTOF (PASEF, diaPASEF) and SCIEX TripleTOF acquisitions.</p>
-    <div class="skills-strip">
-      <div class="sw"><div class="sw-label">Search · DDA</div><div class="sw-name">MaxQuant</div><div class="sw-desc">Label-free quantification, SILAC, TMT/iTRAQ, PTM localisation; Andromeda search engine.</div></div>
-      <div class="sw"><div class="sw-label">Search · DDA / DIA</div><div class="sw-name">FragPipe (MSFragger)</div><div class="sw-desc">Closed/open search, DDA-LFQ, DIA-Umpire and library-free DIA via DIA-NN integration.</div></div>
-      <div class="sw"><div class="sw-label">Search · DIA</div><div class="sw-name">DIA-NN</div><div class="sw-desc">Library-free and library-based DIA quantification; native timsTOF diaPASEF support.</div></div>
-      <div class="sw"><div class="sw-label">Search · DIA</div><div class="sw-name">Spectronaut</div><div class="sw-desc">DirectDIA and library-based DIA workflows; cross-run normalisation and missingness handling.</div></div>
-      <div class="sw"><div class="sw-label">Vendor · Bruker</div><div class="sw-name">timsTOF / PaSER</div><div class="sw-desc">PASEF and diaPASEF acquisition; on-the-fly processing of 4D LC&ndash;IMS&ndash;MS/MS data.</div></div>
-      <div class="sw"><div class="sw-label">Vendor · Thermo</div><div class="sw-name">Xcalibur · FreeStyle</div><div class="sw-desc">Method setup and raw-data inspection on Orbitrap Exploris / Astral / Q Exactive families.</div></div>
-      <div class="sw"><div class="sw-label">Statistics &amp; QC</div><div class="sw-name">Perseus · R / RStudio</div><div class="sw-desc">Differential expression, imputation, GO/pathway enrichment, reproducibility QC.</div></div>
-      <div class="sw"><div class="sw-label">Visualisation</div><div class="sw-name">Skyline · Prism</div><div class="sw-desc">Targeted quant inspection, dose-response and figure-quality plots for publication.</div></div>
-    </div>
-  </div>
-</section>
 
-<!-- ═══ PUBLICATIONS ═══ -->
+<!-- ═══════════════════════════════════════════════════════════════
+     SECTION 3: PUBLICATIONS  (id="publications" for the jump link)
+     ═══════════════════════════════════════════════════════════════
+     Papers are grouped by year using .pub-year-group blocks.
+     Each paper is an <article class="pub"> inside its year group.
+
+     
+     STRUCTURE OF ONE PAPER ENTRY:
+     ┌────────────────────────────────────────────────────────────┐
+     │ <article class="pub">                                      │
+     │   <h3>Full paper title</h3>                                │
+     │   <p class="authors">                                      │
+     │     <b>Bhaumik KN</b>, Co-Author A, Co-Author B, et al.   │
+     │     ← wrap name in <b>...</b> to make it bold/teal        │
+     │   </p>                                                     │
+     │   <p class="venue">Journal · Year · Volume · Pages</p>    │
+     │   <div class="pub-links">                                  │
+     │     <a href="...">Scholar link button</a>                  │
+     │   </div>                                                   │
+     │ </article>                                                  │
+     └────────────────────────────────────────────────────────────┘
+
+     TO ADD A NEW PAPER:
+       1. If it's a new year, copy a whole .pub-year-group block
+          and change the year label and paper details.
+       2. If it's the same year as an existing group, copy just
+          the <article class="pub">...</article> block and paste
+          it inside that year's .pub-year-group div.
+     TO ADD A JOURNAL COVER IMAGE:
+       Place the image in docs/images/ and add this block inside
+       the <article> before the <h3>, replacing the filename:
+         <a href="SCHOLAR_LINK" target="_blank" style="float:right;
+            margin:0 0 12px 18px; display:block; width:90px;
+            border-radius:4px; overflow:hidden; border:1px solid #E4E1D8;">
+           <img src="images/YOUR_COVER.jpg" style="width:100%; display:block;" />
+         </a>
+     ─────────────────────────────────────────────────────────────── -->
 <section class="section alt" id="publications">
   <div class="container">
+
     <div class="section-head">
       <div>
         <div class="eyebrow">Peer-reviewed</div>
         <h2>Publications</h2>
       </div>
+      <!-- Links to external profiles -->
       <div style="display:flex; align-items:center; gap:10px;">
-        <a href="https://scholar.google.com/citations?user=DrMMYFoAAAAJ&hl=en" class="btn btn-outline" target="_blank" rel="noopener" style="font-size:.84rem; padding:8px 14px;"><i class="fas fa-graduation-cap"></i> Google Scholar</a>
-        <a href="https://www.researchgate.net/profile/Kaushik-Nath-Bhaumik" class="btn btn-ghost" target="_blank" rel="noopener" style="font-size:.84rem; padding:8px 14px;"><i class="fab fa-researchgate"></i> ResearchGate</a>
+        <a href="https://scholar.google.com/citations?user=DrMMYFoAAAAJ&hl=en"
+           class="btn btn-outline" target="_blank" rel="noopener"
+           style="font-size:.84rem; padding:8px 14px;">
+          <i class="fas fa-graduation-cap"></i> Google Scholar
+        </a>
+        <a href="https://www.researchgate.net/profile/Kaushik-Nath-Bhaumik"
+           class="btn btn-ghost" target="_blank" rel="noopener"
+           style="font-size:.84rem; padding:8px 14px;">
+          <i class="fab fa-researchgate"></i> ResearchGate
+        </a>
       </div>
     </div>
 
-    <!-- Stats row -->
-    <div class="grid grid-3" style="margin-bottom:40px;">
-      <div class="stat"><div class="icon"><i class="fas fa-book"></i></div><div class="label">Total publications</div><div class="value">5</div></div>
-      <div class="stat"><div class="icon"><i class="fas fa-user-pen"></i></div><div class="label">First-author</div><div class="value">2</div></div>
-      <div class="stat"><div class="icon"><i class="fas fa-calendar"></i></div><div class="label">Span</div><div class="value mono" style="font-size:1.8rem; letter-spacing:.04em;">2018–2024</div></div>
-    </div>
 
-    <!-- 2024 -->
+    <!-- ── YEAR GROUP: 2024 ───────────────────────────────────────
+         TO ADD A PAPER IN THIS YEAR: copy the <article class="pub">
+         block below and paste it inside this year-group div.
+         ────────────────────────────────────────────────────────── -->
     <div class="pub-year-group">
-      <div class="pub-year-label">2024</div>
+      <div class="pub-year-label">2024</div>  <!-- ← year badge -->
+
+      <!-- Paper 1 -->
       <article class="pub">
-        <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=DrMMYFoAAAAJ&citation_for_view=DrMMYFoAAAAJ:u5HHmVD_uO8C" target="_blank" rel="noopener" style="float:right; margin:0 0 12px 18px; display:block; width:84px; border-radius:var(--radius-sm); overflow:hidden; border:1px solid var(--line);">
-        </a>
-        <h3>Chemically diverse antimicrobial peptides induce hyperpolarization of the bacterial membrane</h3>
-        <p class="authors"><b>Bhaumik KN</b>, Spohn R, Dunai A, Daruka L, Hetényi A, et al.</p>
-        <p class="venue">Communications Biology · 2024 · 7, 1–12</p>
+        <h3>
+          Chemically diverse antimicrobial peptides induce hyperpolarization
+          of the bacterial membrane
+          <!-- ↑ Full paper title -->
+        </h3>
+        <p class="authors">
+          <b>Bhaumik KN</b>, Spohn R, Dunai A, Daruka L, Hetényi A, et al.
+          <!-- ↑ Author list. Wrap name in <b>...</b> to bold it. -->
+        </p>
+        <p class="venue">
+          Communications Biology · 2024 · 7, 1–12
+          <!-- ↑ Journal · Year · Volume · Pages -->
+        </p>
         <div class="pub-links">
-          <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=DrMMYFoAAAAJ&citation_for_view=DrMMYFoAAAAJ:u5HHmVD_uO8C" target="_blank" rel="noopener" class="btn btn-ghost" style="font-size:.8rem; padding:6px 12px;"><i class="fas fa-external-link-alt"></i> Scholar</a>
+          <!-- Scholar link button — update href to the direct citation URL -->
+          <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=DrMMYFoAAAAJ&citation_for_view=DrMMYFoAAAAJ:u5HHmVD_uO8C"
+             target="_blank" rel="noopener"
+             class="btn btn-ghost" style="font-size:.8rem; padding:6px 12px;">
+            <i class="fas fa-external-link-alt"></i> Scholar
+          </a>
         </div>
       </article>
-    </div>
 
-    <!-- 2022 -->
+    </div><!-- end 2024 group -->
+
+
+    <!-- ── YEAR GROUP: 2022 ───────────────────────────────────────
+         Two papers in this year.
+         ────────────────────────────────────────────────────────── -->
     <div class="pub-year-group">
       <div class="pub-year-label">2022</div>
 
+      <!-- Paper 2 — has a journal cover image -->
       <article class="pub">
-        <!-- Journal cover image -->
-        <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=DrMMYFoAAAAJ&citation_for_view=DrMMYFoAAAAJ:2osOgNQ5qMEC" target="_blank" rel="noopener" style="float:right; margin:0 0 12px 18px; display:block; width:90px; border-radius:var(--radius-sm); overflow:hidden; border:1px solid var(--line); box-shadow:var(--shadow-sm);">
-          <img src="images/02_journal_cover.jpeg" alt="MSDE Journal Cover" style="width:100%; display:block;" />
+        <!-- Journal cover image floating to the right.
+             The image file must be in docs/images/.
+             TO REMOVE THE IMAGE: delete this entire <a> block. -->
+        <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=DrMMYFoAAAAJ&citation_for_view=DrMMYFoAAAAJ:2osOgNQ5qMEC"
+           target="_blank" rel="noopener"
+           style="float:right; margin:0 0 12px 18px; display:block; width:90px; border-radius:var(--radius-sm); overflow:hidden; border:1px solid var(--line); box-shadow:var(--shadow-sm);">
+          <img src="images/02_journal_cover.jpeg" alt="MSDE Journal Cover"
+               style="width:100%; display:block;" />
+          <!-- ↑ Change the filename if the cover image is renamed -->
         </a>
-        <h3>Rationally designed foldameric adjuvants enhance antibiotic efficacy via promoting membrane hyperpolarization</h3>
+
+        <h3>
+          Rationally designed foldameric adjuvants enhance antibiotic efficacy
+          via promoting membrane hyperpolarization
+        </h3>
         <p class="authors"><b>Bhaumik KN</b>, Hetényi A, Olajos G, Martins A, et al.</p>
-        <p class="venue">Molecular Systems Design &amp; Engineering · 2022 · 7(1) · 21–33</p>
+        <p class="venue">Molecular Systems Design and Engineering · 2022 · 7(1) · 21–33</p>
         <div class="pub-links" style="clear:both; padding-top:4px;">
-          <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=DrMMYFoAAAAJ&citation_for_view=DrMMYFoAAAAJ:2osOgNQ5qMEC" target="_blank" rel="noopener" class="btn btn-ghost" style="font-size:.8rem; padding:6px 12px;"><i class="fas fa-external-link-alt"></i> Scholar</a>
+          <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=DrMMYFoAAAAJ&citation_for_view=DrMMYFoAAAAJ:2osOgNQ5qMEC"
+             target="_blank" rel="noopener"
+             class="btn btn-ghost" style="font-size:.8rem; padding:6px 12px;">
+            <i class="fas fa-external-link-alt"></i> Scholar
+          </a>
         </div>
       </article>
 
+      <!-- Paper 3 -->
       <article class="pub">
-        <h3>α/β-Peptides as nanomolar triggers of lipid-raft-mediated endocytosis through GM1 ganglioside recognition</h3>
+        <h3>
+          &alpha;/&beta;-Peptides as nanomolar triggers of lipid-raft-mediated
+          endocytosis through GM1 ganglioside recognition
+        </h3>
         <p class="authors">Hetényi A, Szabó E, Imre N, <b>Bhaumik KN</b>, et al.</p>
         <p class="venue">Pharmaceutics · 2022 · 14(3) · 580</p>
         <div class="pub-links">
-          <a href="https://scholar.google.com/citations?user=DrMMYFoAAAAJ&hl=en" target="_blank" rel="noopener" class="btn btn-ghost" style="font-size:.8rem; padding:6px 12px;"><i class="fas fa-external-link-alt"></i> Scholar</a>
+          <a href="https://scholar.google.com/citations?user=DrMMYFoAAAAJ&hl=en"
+             target="_blank" rel="noopener"
+             class="btn btn-ghost" style="font-size:.8rem; padding:6px 12px;">
+            <i class="fas fa-external-link-alt"></i> Scholar
+          </a>
         </div>
       </article>
-    </div>
 
-    <!-- 2020 -->
+    </div><!-- end 2022 group -->
+
+
+    <!-- ── YEAR GROUP: 2020 ───────────────────────────────────────  -->
     <div class="pub-year-group">
       <div class="pub-year-label">2020</div>
+
+      <!-- Paper 4 -->
       <article class="pub">
-        <h3>Mechanisms of the effectiveness of lipid nanoparticle formulations loaded with anti-tubercular drug combinations toward overcoming drug bioavailability in tuberculosis</h3>
+        <h3>
+          Mechanisms of the effectiveness of lipid nanoparticle formulations
+          loaded with anti-tubercular drug combinations toward overcoming drug
+          bioavailability in tuberculosis
+        </h3>
         <p class="authors">Banerjee S, Roy S, <b>Bhaumik KN</b>, Pillai J.</p>
         <p class="venue">Journal of Drug Targeting · 2020 · 28(1) · 55–69</p>
         <div class="pub-links">
-          <a href="https://scholar.google.com/citations?user=DrMMYFoAAAAJ&hl=en" target="_blank" rel="noopener" class="btn btn-ghost" style="font-size:.8rem; padding:6px 12px;"><i class="fas fa-external-link-alt"></i> Scholar</a>
+          <a href="https://scholar.google.com/citations?user=DrMMYFoAAAAJ&hl=en"
+             target="_blank" rel="noopener"
+             class="btn btn-ghost" style="font-size:.8rem; padding:6px 12px;">
+            <i class="fas fa-external-link-alt"></i> Scholar
+          </a>
         </div>
       </article>
-    </div>
 
-    <!-- 2018 -->
+    </div><!-- end 2020 group -->
+
+
+    <!-- ── YEAR GROUP: 2018 ───────────────────────────────────────  -->
     <div class="pub-year-group">
       <div class="pub-year-label">2018</div>
+
+      <!-- Paper 5 -->
       <article class="pub">
-        <h3>Comparative study of oral lipid nanoparticle formulations (LNFs) for chemical stabilization of antitubercular drugs: physicochemical and cellular evaluation</h3>
+        <h3>
+          Comparative study of oral lipid nanoparticle formulations (LNFs) for
+          chemical stabilization of antitubercular drugs: physicochemical and
+          cellular evaluation
+        </h3>
         <p class="authors">Banerjee S, Roy S, <b>Bhaumik KN</b>, Kshetrapal P, Pillai J.</p>
         <p class="venue">Artificial Cells, Nanomedicine, and Biotechnology · 2018 · 46(1) · 540–58</p>
         <div class="pub-links">
-          <a href="https://scholar.google.com/citations?user=DrMMYFoAAAAJ&hl=en" target="_blank" rel="noopener" class="btn btn-ghost" style="font-size:.8rem; padding:6px 12px;"><i class="fas fa-external-link-alt"></i> Scholar</a>
+          <a href="https://scholar.google.com/citations?user=DrMMYFoAAAAJ&hl=en"
+             target="_blank" rel="noopener"
+             class="btn btn-ghost" style="font-size:.8rem; padding:6px 12px;">
+            <i class="fas fa-external-link-alt"></i> Scholar
+          </a>
         </div>
       </article>
-    </div>
+
+    </div><!-- end 2018 group -->
+
 
   </div>
 </section>
 
-<!-- ═══ CONFERENCES ═══ -->
+
+<!-- ═══════════════════════════════════════════════════════════════
+     SECTION 4: CONFERENCES  (id="conferences" for the jump link)
+     ═══════════════════════════════════════════════════════════════
+     Each presentation is a .conf-item card with an amber left
+     border. They are listed most recent first.
+
+     STRUCTURE OF ONE CONFERENCE ENTRY:
+     ┌────────────────────────────────────────────────────────────┐
+     │ <div class="conf-item">                                    │
+     │   <span class="conf-badge">Year · City</span>             │
+     │   <h3>Presentation title</h3>                             │
+     │   <p class="conf-authors"><b>My Name</b>, Co-Author...</p>│
+     │   <p class="conf-venue">Conference name · Date</p>        │
+     │ </div>                                                     │
+     └────────────────────────────────────────────────────────────┘
+
+     TO ADD A PRESENTATION: copy one .conf-item block and paste
+       it above the others (most recent first).
+     TO REMOVE ONE: delete the whole .conf-item block.
+     ─────────────────────────────────────────────────────────────── -->
 <section class="section" id="conferences">
   <div class="container">
     <div class="section-head">
       <div>
-        <div class="eyebrow">Talks &amp; Posters</div>
+        <div class="eyebrow">Talks and Posters</div>
         <h2>Conferences</h2>
       </div>
-      <div class="mono" style="font-size:12px; color:var(--ink-3); text-transform:uppercase; letter-spacing:.08em;">4 presentations · 2021–2022</div>
+      <div class="mono" style="font-size:12px; color:var(--ink-3); text-transform:uppercase; letter-spacing:.08em;">
+        4 presentations · 2021–2022
+        <!-- ↑ Update this count and date range when new presentations are added -->
+      </div>
     </div>
 
+
+    <!-- Conference 1 -->
     <div class="conf-item">
       <span class="conf-badge">2022 · Barcelona, Spain</span>
-      <h3>Novel foldameric peptide adjuvants counter antimicrobial resistance via promoting membrane hyperpolarization</h3>
-      <p class="conf-authors"><b>Bhaumik KN</b>, Hetényi A, Olajos G, Martins A, Spohn R, Németh L, et al.</p>
-      <p class="conf-venue">36th European Peptide Symposium &amp; 12th International Peptide Symposium · 28 Aug – 2 Sep 2022</p>
+      <!-- ↑ Year and city shown in the amber pill badge -->
+      <h3>
+        Novel foldameric peptide adjuvants counter antimicrobial resistance
+        via promoting membrane hyperpolarization
+      </h3>
+      <p class="conf-authors">
+        <b>Bhaumik KN</b>, Hetényi A, Olajos G, Martins A, Spohn R, Németh L, et al.
+        <!-- ↑ Author list. Wrap name in <b>...</b> to bold it. -->
+      </p>
+      <p class="conf-venue">
+        36th European Peptide Symposium and 12th International Peptide Symposium
+        · 28 Aug – 2 Sep 2022
+        <!-- ↑ Full conference name and dates -->
+      </p>
     </div>
 
+
+    <!-- Conference 2 -->
     <div class="conf-item">
       <span class="conf-badge">2022 · Balatonszemes, Hungary</span>
-      <h3>Host defence peptides (HDPs) hyperpolarize membranes by selective ion transport at sub-MIC concentration</h3>
+      <h3>
+        Host defence peptides (HDPs) hyperpolarize membranes by selective ion
+        transport at sub-MIC concentration
+      </h3>
       <p class="conf-authors"><b>Bhaumik KN</b>, Hetényi A, Martinek TA, et al.</p>
       <p class="conf-venue">Peptide Chemistry and Chemical Biology Symposium · 30 May – 1 Jun 2022</p>
     </div>
 
+
+    <!-- Conference 3 -->
     <div class="conf-item">
       <span class="conf-badge">2021 · Pécs, Hungary</span>
-      <h3>Rationally designed foldameric adjuvants enhance antibiotic efficacy via promoting membrane hyperpolarization</h3>
-      <p class="conf-authors"><b>Bhaumik KN</b>, Hetényi A, Olajos G, Martins A, Spohn R, Németh L, et al.</p>
+      <h3>
+        Rationally designed foldameric adjuvants enhance antibiotic efficacy
+        via promoting membrane hyperpolarization
+      </h3>
+      <p class="conf-authors">
+        <b>Bhaumik KN</b>, Hetényi A, Olajos G, Martins A, Spohn R, Németh L, et al.
+      </p>
       <p class="conf-venue">10th Interdisciplinary Doctoral Conference · 12–13 Nov 2021</p>
     </div>
 
+
+    <!-- Conference 4 -->
     <div class="conf-item">
       <span class="conf-badge">2021 · Balatonszemes, Hungary</span>
-      <h3>Rationally designed foldameric adjuvants enhance antibiotic efficacy via promoting membrane hyperpolarization</h3>
-      <p class="conf-authors"><b>Bhaumik KN</b>, Hetényi A, Olajos G, Martins A, Spohn R, Németh L, et al.</p>
-      <p class="conf-venue">MTA Peptidkémiai Munkabizottság Ülésére (MTA Peptide Chemistry Working Committee Meeting) · 11–13 Oct 2021</p>
+      <h3>
+        Rationally designed foldameric adjuvants enhance antibiotic efficacy
+        via promoting membrane hyperpolarization
+      </h3>
+      <p class="conf-authors">
+        <b>Bhaumik KN</b>, Hetényi A, Olajos G, Martins A, Spohn R, Németh L, et al.
+      </p>
+      <p class="conf-venue">
+        MTA Peptidkémiai Munkabizottság Ülésére (MTA Peptide Chemistry Working
+        Committee Meeting) · 11–13 Oct 2021
+      </p>
     </div>
+
 
   </div>
 </section>
 
-<!-- ═══ AWARDS ═══ -->
+
+<!-- ═══════════════════════════════════════════════════════════════
+     SECTION 5: AWARDS  (id="awards" for the jump link)
+     ═══════════════════════════════════════════════════════════════
+     Two award cards side by side. Each has an icon, a date,
+     an award title, the funding body, and a short description.
+
+     STRUCTURE OF ONE AWARD CARD:
+     ┌────────────────────────────────────────────────────────────┐
+     │ <div class="award-card">                                   │
+     │   <div class="award-medal" style="background:...">        │
+     │     <i class="fas fa-medal"></i>  ← icon                  │
+     │   </div>                                                   │
+     │   <div>                                                    │
+     │     <div class="mono ...">Date</div>                       │
+     │     <h3>Award name</h3>                                    │
+     │     <div style="color:var(--secondary)...">Funder</div>    │
+     │     <p>Description</p>                                     │
+     │   </div>                                                   │
+     │ </div>                                                     │
+     └────────────────────────────────────────────────────────────┘
+
+     TO ADD AN AWARD: copy one .award-card block, paste it inside
+       the .grid.grid-2 div, and update the details.
+     ─────────────────────────────────────────────────────────────── -->
 <section class="section alt" id="awards">
   <div class="container">
     <div class="section-head">
       <div>
         <div class="eyebrow">Recognition</div>
-        <h2>Awards &amp; grants</h2>
+        <h2>Awards and grants</h2>
       </div>
     </div>
+
     <div class="grid grid-2">
 
+
+      <!-- Award 1: Stipendium Hungaricum -->
       <div class="award-card">
-        <div class="award-medal" style="background:rgba(193,140,44,0.12); color:var(--secondary);"><i class="fas fa-medal"></i></div>
+        <!-- Icon circle — amber background with medal icon -->
+        <div class="award-medal" style="background:rgba(193,140,44,0.12); color:var(--secondary);">
+          <i class="fas fa-medal"></i>
+        </div>
         <div>
-          <div class="mono" style="font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--ink-3); margin-bottom:6px;">Jun 2018 · 4.5 years</div>
-          <h3 style="font-size:1.08rem; margin-bottom:4px;">Stipendium Hungaricum Scholarship</h3>
-          <div style="color:var(--secondary); font-weight:600; font-size:.9rem; margin-bottom:8px;">Tempus Public Foundation · Hungary</div>
-          <p style="font-size:.92rem; margin:0;">PhD Scholarship award supporting doctoral research at the Doctoral School of Pharmaceutical Sciences, University of Szeged, for 4.5 years.</p>
+          <div class="mono" style="font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--ink-3); margin-bottom:6px;">
+            Jun 2018 · 4.5 years  <!-- ← date received and duration -->
+          </div>
+          <h3 style="font-size:1.08rem; margin-bottom:4px;">
+            Stipendium Hungaricum Scholarship  <!-- ← award title -->
+          </h3>
+          <div style="color:var(--secondary); font-weight:600; font-size:.9rem; margin-bottom:8px;">
+            Tempus Public Foundation · Hungary  <!-- ← funding body -->
+          </div>
+          <p style="font-size:.92rem; margin:0;">
+            PhD Scholarship award supporting doctoral research at the Doctoral
+            School of Pharmaceutical Sciences, University of Szeged, for 4.5 years.
+            <!-- ↑ Short description of the award -->
+          </p>
         </div>
       </div>
 
+
+      <!-- Award 2: European Peptide Society Grant -->
       <div class="award-card">
-        <div class="award-medal" style="background:rgba(15,76,92,0.10); color:var(--primary);"><i class="fas fa-trophy"></i></div>
+        <div class="award-medal" style="background:rgba(15,76,92,0.10); color:var(--primary);">
+          <i class="fas fa-trophy"></i>  <!-- ← trophy icon instead of medal -->
+        </div>
         <div>
-          <div class="mono" style="font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--ink-3); margin-bottom:6px;">Apr 2022</div>
-          <h3 style="font-size:1.08rem; margin-bottom:4px;">European Peptide Society Symposium Grant</h3>
-          <div style="color:var(--secondary); font-weight:600; font-size:.9rem; margin-bottom:8px;">European Peptide Society</div>
-          <p style="font-size:.92rem; margin:0;">Travel grant to attend the 36th European &amp; 12th International Peptide Symposium, 28 Aug – 2 Sep 2022, Sitges (Barcelona), Spain.</p>
+          <div class="mono" style="font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--ink-3); margin-bottom:6px;">
+            Apr 2022
+          </div>
+          <h3 style="font-size:1.08rem; margin-bottom:4px;">
+            European Peptide Society Symposium Grant
+          </h3>
+          <div style="color:var(--secondary); font-weight:600; font-size:.9rem; margin-bottom:8px;">
+            European Peptide Society
+          </div>
+          <p style="font-size:.92rem; margin:0;">
+            Travel grant to attend the 36th European and 12th International
+            Peptide Symposium, 28 Aug – 2 Sep 2022, Sitges (Barcelona), Spain.
+          </p>
         </div>
       </div>
 
-    </div>
+
+    </div><!-- end grid -->
   </div>
 </section>
 
-<!-- ═══ FOOTER ═══ -->
+
+<!-- ═══════════════════════════════════════════════════════════════
+     FOOTER — same dark teal footer used on every page.
+     If a link or email changes, update it here and on every
+     other page too (use Ctrl+F across all files).
+     ─────────────────────────────────────────────────────────────── -->
 <footer class="footer">
   <div class="container">
     <div class="footer-grid">
+
+      <!-- Column 1: name, tagline, social icons -->
       <div>
         <h4>Kaushik Nath Bhaumik, Ph.D.</h4>
-        <p style="color:#9DB6BB; max-width:46ch;">Pharmaceutical scientist working on peptide chemistry, drug delivery and analytical methods. Based in Norwich, United Kingdom.</p>
+        <p style="color:#9DB6BB; max-width:46ch;">
+          Pharmaceutical scientist working on peptide chemistry, drug delivery
+          and analytical methods. Based in Norwich, United Kingdom.
+        </p>
         <div class="social-row" style="margin-top:14px;">
           <a href="mailto:kaushiknb9@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
           <a href="https://scholar.google.com/citations?user=DrMMYFoAAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
@@ -603,37 +992,53 @@ small { color: var(--ink-3); }
           <a href="https://www.linkedin.com/in/kaushik-nath-bhaumik-2a4a73bb/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
           <a href="https://x.com/kaushik_nb" target="_blank" rel="noopener" aria-label="X / Twitter"><i class="fab fa-x-twitter"></i></a>
           <a href="https://github.com/kaushik-nb" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
-          <a href="docs/Kaushik_Nath_Bhaumik_Resume_2026-05-05.pdf" target="_blank" rel="noopener" aria-label="Download CV"><i class="fas fa-file-pdf"></i></a>
         </div>
       </div>
+
+      <!-- Column 2: page links -->
       <div>
         <h4>Site</h4>
         <ul style="list-style:none; padding:0; margin:0; display:grid; gap:6px;">
-          <li><a href="about.html">About</a></li>
+          <li><a href="index.html">About</a></li>
           <li><a href="research.html">Research</a></li>
-          <li><a href="outreach.html">Outreach &amp; Teaching</a></li>
+          <li><a href="outreach.html">Outreach</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
+
+      <!-- Column 3: contact details -->
       <div>
         <h4>Contact</h4>
         <ul style="list-style:none; padding:0; margin:0; display:grid; gap:6px;">
-          <li><i class="fas fa-envelope" style="margin-right:8px; color:var(--secondary-300);"></i> kaushiknb9@gmail.com</li>
-          <li><i class="fas fa-location-dot" style="margin-right:8px; color:var(--secondary-300);"></i> Norwich, UK</li>
+          <li>
+            <i class="fas fa-envelope" style="margin-right:8px; color:var(--secondary-300);"></i>
+            kaushiknb9@gmail.com
+          </li>
+          <li>
+            <i class="fas fa-location-dot" style="margin-right:8px; color:var(--secondary-300);"></i>
+            Norwich, UK
+          </li>
         </ul>
       </div>
+
     </div>
+
+    <!-- Copyright -->
     <div class="footer-bottom">
-      <div>© 2026 Kaushik Nath Bhaumik · All rights reserved</div>
-      <div>Built with HTML &amp; CSS · Hosted on GitHub Pages</div>
+      <div>&copy; 2026 Kaushik Nath Bhaumik . All rights reserved</div>
+      <div>Built with HTML and CSS . Hosted on GitHub Pages</div>
     </div>
+
   </div>
 </footer>
 
+
+<!-- Mobile menu toggle — do not edit -->
 <script>
   document.getElementById('menuBtn').addEventListener('click', () => {
     document.getElementById('nav').classList.toggle('open');
   });
 </script>
+
 </body>
 </html>
